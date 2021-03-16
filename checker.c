@@ -6,12 +6,11 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/15 11:29:27 by plam              #+#    #+#             */
-/*   Updated: 2021/03/15 17:35:58 by plam             ###   ########.fr       */
+/*   Updated: 2021/03/16 09:26:33 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-#include <stdio.h>
+#include "stack.h"
 
 t_frame	*stack_init(t_vec pos)
 {
