@@ -6,13 +6,13 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/15 11:29:27 by plam              #+#    #+#             */
-/*   Updated: 2021/03/16 09:26:33 by plam             ###   ########.fr       */
+/*   Updated: 2021/03/18 17:20:23 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "stack.h"
 
-t_frame	*stack_init(t_vec pos)
+t_frame	*stack_init(t_stack pos)
 {
 	t_frame	*frame;
 
@@ -20,16 +20,16 @@ t_frame	*stack_init(t_vec pos)
 	if (frame == NULL)
 		return (NULL);
 	frame->next = NULL;
-	frame->pos = pos;
+	frame->stack = pos;
 	return (frame);
 }
 
-int	stack_push(t_frame **item, t_vec pos)
+int	stack_push(t_frame **item, t_stack stack)
 {
 	t_frame	*old;
 
 	old = *item;
-	*item = stack_init(pos);
+	*item = stack_init(stack);
 	if (*item == NULL)
 		return (ERR);
 	(*item)->next = old;
@@ -38,14 +38,14 @@ int	stack_push(t_frame **item, t_vec pos)
 
 t_vec	stack_pop(t_frame **item)
 {
-	t_vec	pos;
+	t_stack	stack;
 	t_frame	*old;
 
 	if (*item == NULL)
-		return ((t_vec){INT_MAX, INT_MIN});
+		return ((t_stack){INT_MAX, INT_MIN});
 	old = *item;
 	*item = (*item)->next;
-	pos = old->pos;
+	pos = old->stack;
 	free(old);
 	return (pos);
 }
