@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/15 11:29:27 by plam              #+#    #+#             */
-/*   Updated: 2021/03/18 17:20:23 by plam             ###   ########.fr       */
+/*   Updated: 2021/03/24 08:22:05 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ int	stack_push(t_frame **item, t_stack stack)
 	return (OK);
 }
 
-t_vec	stack_pop(t_frame **item)
+t_stack	stack_pop(t_frame **item)
 {
 	t_stack	stack;
 	t_frame	*old;
@@ -45,9 +45,9 @@ t_vec	stack_pop(t_frame **item)
 		return ((t_stack){INT_MAX, INT_MIN});
 	old = *item;
 	*item = (*item)->next;
-	pos = old->stack;
+	stack = old->stack;
 	free(old);
-	return (pos);
+	return (stack);
 }
 
 int	stack_len(t_frame *item)
