@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/25 16:54:17 by plam              #+#    #+#             */
-/*   Updated: 2021/04/02 13:11:21 by plam             ###   ########.fr       */
+/*   Updated: 2021/04/02 14:29:09 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,8 @@ int	check_info(char *arg)
 	}
 	return (i);
 }
+
+void	record_info()
 
 void	put_info(t_stack stack)
 {
