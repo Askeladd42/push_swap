@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/02 14:28:50 by plam              #+#    #+#             */
-/*   Updated: 2021/04/04 11:02:52 by plam             ###   ########.fr       */
+/*   Updated: 2021/04/04 11:19:19 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,30 +32,32 @@ int	check_info(char *arg)
 	return (i - 1);
 }
 
-void	rec_info(char *arg)
+void	rec_info(char *arg, t_stack stack)
 {
 	int	i;
 	int	size;
-	int	*tab;
 
 	if (size = check_info(arg) < 1)
 	{
 		printf("Error\n");
 		return;
 	}
-	tab = malloc(sizeof(int) * check_info(arg));
-	if (tab == NULL)
+	size = check_info(arg);
+	stack.a = malloc(sizeof(int) * size);
+	if (stack.a == NULL)
 		return;
+	stack.b = malloc(sizeof(int) * size);
 	i = 0;
 	while (i < size)
 	{
+		stack.b[i] = NULL;
 		while (*arg)
 		{
 			if (*arg >= '0' && *arg <= '9')
-				tab[i++] = ft_atoi(*arg);
+				stack.a[i++] = ft_atoi(*arg);
 			while (*arg == ' ' || *arg == '\0')
 				*arg++;
 		}
 	}
-	tab[i] = NULL;
+	stack.a[i] = NULL;
 }
