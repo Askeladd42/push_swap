@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/02 14:28:50 by plam              #+#    #+#             */
-/*   Updated: 2021/04/04 10:48:09 by plam             ###   ########.fr       */
+/*   Updated: 2021/04/04 11:02:52 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,11 +51,11 @@ void	rec_info(char *arg)
 	{
 		while (*arg)
 		{
-			while (*arg >= '0' && *arg <= '9')
-				ft_atoi(*arg);
-			if (*arg == ' ' || *arg == '\0')
-				i++;
-			*arg++;
+			if (*arg >= '0' && *arg <= '9')
+				tab[i++] = ft_atoi(*arg);
+			while (*arg == ' ' || *arg == '\0')
+				*arg++;
 		}
 	}
+	tab[i] = NULL;
 }
