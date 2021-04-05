@@ -6,12 +6,14 @@
 #    By: plam <plam@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/03/15 11:29:08 by plam              #+#    #+#              #
-#    Updated: 2021/03/18 17:14:48 by plam             ###   ########.fr        #
+#    Updated: 2021/04/05 14:31:24 by plam             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 SRC			=	checker.c\
-				push_swap.c
+				push_swap.c\
+				free_stack.c\
+				check_info.c
 
 NAME		=	push_swap
 
@@ -38,4 +40,4 @@ fclean:		clean
 
 re:			fclean all
 
-.PHONY:		all clean fclean re bonus
+.PHONY:		all clean fclean re bonus checker push_swap
