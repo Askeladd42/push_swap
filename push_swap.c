@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/02 14:28:50 by plam              #+#    #+#             */
-/*   Updated: 2021/04/04 11:19:19 by plam             ###   ########.fr       */
+/*   Updated: 2021/04/05 18:06:03 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,8 +39,8 @@ void	rec_info(char *arg, t_stack stack)
 
 	if (size = check_info(arg) < 1)
 	{
-		printf("Error\n");
-		return;
+		write(2, "Error\n", 6);
+		return (ERR);
 	}
 	size = check_info(arg);
 	stack.a = malloc(sizeof(int) * size);
