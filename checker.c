@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/15 11:29:27 by plam              #+#    #+#             */
-/*   Updated: 2021/04/05 18:05:52 by plam             ###   ########.fr       */
+/*   Updated: 2021/04/06 13:34:52 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,13 @@
 
 int	checker(int	*data)
 {
+	while (get_next_line(0, stdin) > 0)
+		continue;
 	else
 	{
 		write(2, "Error\n", 6);
 		return (ERR);
+	}
 }
 
 void	check_sort(char *s_type)
