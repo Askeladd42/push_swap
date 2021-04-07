@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/15 11:29:27 by plam              #+#    #+#             */
-/*   Updated: 2021/04/07 18:28:12 by plam             ###   ########.fr       */
+/*   Updated: 2021/04/07 18:34:11 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ int	main(int ac, char **av)
 	inst = 0;
 	if (ac > 1 && av[1])
 	{
-		check_sort(inst);
+		check_sort(inst, av[1]);
 		checker(av[1]);
 	}
 	return (0);
