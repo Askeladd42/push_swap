@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/15 11:29:27 by plam              #+#    #+#             */
-/*   Updated: 2021/04/07 18:34:11 by plam             ###   ########.fr       */
+/*   Updated: 2021/04/07 18:36:21 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int	checker(int	*data)
 {
 	if (get_next_line(0, stdin) > 0)
-		printf(stdin);
+		printf("%s\n", stdin);
 	else
 	{
 		write(2, "Error\n", 6);
