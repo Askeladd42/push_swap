@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/15 17:36:13 by plam              #+#    #+#             */
-/*   Updated: 2021/04/05 18:05:24 by plam             ###   ########.fr       */
+/*   Updated: 2021/04/08 15:35:31 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@
 
 #include <unistd.h>
 #include <stdio.h>
+#include "./srcs/libft/libft.h"
 
 typedef struct s_stack
 {
@@ -32,5 +33,7 @@ typedef struct s_frame
 	struct s_frame	*next;
 	t_stack			stack;
 }					t_frame;
+
+int	check_info(char *arg);
 
 #endif

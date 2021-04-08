@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/04 11:59:37 by plam              #+#    #+#             */
-/*   Updated: 2021/04/04 12:08:07 by plam             ###   ########.fr       */
+/*   Updated: 2021/04/08 15:36:15 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,5 +25,5 @@ void	free_stack(t_stack stack)
 	}
 	free(stack.a);
 	free(stack.b);
-	free(stack);
+	free(&stack);
 }
