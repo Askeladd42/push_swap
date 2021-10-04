@@ -6,7 +6,7 @@
 #    By: plam <plam@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/03/15 11:29:08 by plam              #+#    #+#              #
-#    Updated: 2021/10/04 15:58:30 by plam             ###   ########.fr        #
+#    Updated: 2021/10/04 16:22:04 by plam             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,11 +18,11 @@ SRCS		+=	checker.c		r.c\
 				free_stack.c	p.c\
 				check_info.c	rr.c
 
-LIBFT		=	srcs/libft
+LIBFT		=	libft/libft.a
 
 PATH		=	srcs/
 
-OBJS		= 	$(addprefix $(PATH), $(SRCS))
+OBJS		= 	$(addprefix $(PATH), $(SRCS:.c=.o))
 
 HEADERS		=	headers/.
 
@@ -34,21 +34,24 @@ CC			=	clang
 
 CFLAGS		=	-g -Wall -Wextra -Werror -I $(HEADERS)
 
-all:			$(LIBFT) $(NAME)
+all:			$(NAME)
 
-$(NAME):		$(OBJS)
+$(NAME):		$(LIBFT) $(OBJS)
 				$(CC) $(CFLAGS) $(OBJS) -o $(NAME)
 
 $(LIBFT):
-				@cd $(LIBFT) && $(MAKE) && $(MAKE) bonus && $(MAKE) clean
+				make -sC libft
+				make -sC libft bonus
 
 %.o: %.c	
 				$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
-				$(RM) $(OBJS:.o)
+				make -C libft clean
+				$(RM) $(OBJS)
 
 fclean:			clean
+				make -C libft fclean
 				$(RM) $(NAME)
 
 re:				fclean all
