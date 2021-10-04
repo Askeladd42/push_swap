@@ -6,23 +6,23 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/28 14:58:10 by plam              #+#    #+#             */
-/*   Updated: 2021/09/28 15:00:45 by plam             ###   ########.fr       */
+/*   Updated: 2021/10/04 13:15:02 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "stack.h"
+#include "instructions.h"
 
-void	ra(t_stack stack)
+void	ra(t_stk *stk)
 {
-	
+	printf("%s\n", "ss");
 }
 
-void	rb(t_stack stack)
+void	rb(t_stk *stk)
 {
-	
+	printf("%s\n", "ss");
 }
 
-void	rr(t_stack stack)
+void	rr(t_stk *stk)
 {
-	
+	printf("%s\n", "ss");
 }

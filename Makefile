@@ -6,14 +6,16 @@
 #    By: plam <plam@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/03/15 11:29:08 by plam              #+#    #+#              #
-#    Updated: 2021/09/28 14:50:03 by plam             ###   ########.fr        #
+#    Updated: 2021/10/04 13:20:59 by plam             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRC			=	checker.c\
-				push_swap.c\
-				free_stack.c\
-				check_info.c
+SRC			=	checker.c		r.c\
+				push_swap.c		s.c\
+				free_stack.c	p.c\
+				check_info.c	rr.c
+
+INCLUDES	=	./includes
 
 NAME		=	push_swap
 

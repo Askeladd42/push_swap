@@ -6,12 +6,17 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/04 12:39:04 by plam              #+#    #+#             */
-/*   Updated: 2021/10/04 12:56:58 by plam             ###   ########.fr       */
+/*   Updated: 2021/10/04 13:12:29 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef INSTRUCTIONS_H
 # define INSTRUCTIONS_H
+
+# include "stack.h"
+
+#include <stdio.h>
+
 
 
 #endif
