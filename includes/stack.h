@@ -6,12 +6,12 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/04 09:00:36 by plam              #+#    #+#             */
-/*   Updated: 2021/10/04 09:38:38 by plam             ###   ########.fr       */
+/*   Updated: 2021/10/04 12:57:06 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-ifndef STACK_H
-def STACK_H
+#ifndef STACK_H
+# define STACK_H
 
 typedef struct s_lst	t_lst;
 
