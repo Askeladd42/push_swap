@@ -6,7 +6,7 @@
 #    By: plam <plam@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/03/15 11:29:08 by plam              #+#    #+#              #
-#    Updated: 2021/10/04 14:47:35 by plam             ###   ########.fr        #
+#    Updated: 2021/10/04 14:50:08 by plam             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,9 +28,9 @@ CC			=	clang
 
 CFLAGS		=	-Wall -Wextra -Werror
 
-LIBFT		=	srcs/libft.a
+LIBFT		=	srcs/libft/libft.a
 
-GNL			=	srcs/get_next_line.c
+GNL			=	srcs/gnl/get_next_line.c
 
 all:		$(NAME)
 
