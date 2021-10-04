@@ -6,7 +6,7 @@
 #    By: plam <plam@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/03/15 11:29:08 by plam              #+#    #+#              #
-#    Updated: 2021/10/04 16:22:04 by plam             ###   ########.fr        #
+#    Updated: 2021/10/04 16:44:21 by plam             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -47,11 +47,11 @@ $(LIBFT):
 				$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
-				make -C libft clean
+				make -sC libft clean
 				$(RM) $(OBJS)
 
 fclean:			clean
-				make -C libft fclean
+				make -sC libft fclean
 				$(RM) $(NAME)
 
 re:				fclean all
