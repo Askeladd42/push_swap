@@ -6,19 +6,16 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/04 09:00:36 by plam              #+#    #+#             */
-/*   Updated: 2021/10/04 09:01:37 by plam             ###   ########.fr       */
+/*   Updated: 2021/10/04 09:05:21 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 ifndef STACK_H
 def STACK_H
 
-#ifndef PUSH_SWAP_LST_H
-# define PUSH_SWAP_LST_H
-
 typedef struct s_lst	t_lst;
 
-struct		s_lst
+struct		t_lst
 {
 	int		data;
 	t_lst	*next;
