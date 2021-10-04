@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/02 14:28:50 by plam              #+#    #+#             */
-/*   Updated: 2021/04/05 18:06:03 by plam             ###   ########.fr       */
+/*   Updated: 2021/10/04 15:23:34 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ int	check_info(char *arg)
 	return (i - 1);
 }
 
-void	rec_info(char *arg, t_stack stack)
+void	rec_info(char *arg, t_stk *stack)
 {
 	int	i;
 	int	size;
