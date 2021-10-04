@@ -6,7 +6,7 @@
 #    By: plam <plam@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/03/15 11:29:08 by plam              #+#    #+#              #
-#    Updated: 2021/10/04 15:21:12 by plam             ###   ########.fr        #
+#    Updated: 2021/10/04 15:35:23 by plam             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -31,7 +31,7 @@ NAME		=	push_swap
 
 RM			=	/bin/rm -f
 
-CC			=	clang
+CC			=	gcc
 
 CFLAGS		=	-Wall -Wextra -Werror -I $(HEADERS)
 
