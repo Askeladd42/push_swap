@@ -6,49 +6,52 @@
 #    By: plam <plam@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/03/15 11:29:08 by plam              #+#    #+#              #
-#    Updated: 2021/10/04 14:50:08 by plam             ###   ########.fr        #
+#    Updated: 2021/10/04 15:14:52 by plam             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRC			=	checker.c		r.c\
+SRC			=	$(GNL)\
+				checker.c		r.c\
 				push_swap.c		s.c\
 				free_stack.c	p.c\
 				check_info.c	rr.c
 
-INCLUDES	=	./includes/instructions.c
-				./includes/stack.h
+LIBFT		=	srcs/libft/libft.a
+
+GNL			=	gnl/get_next_line.c\
+				gnl/get_next_line_utils.c
+
+PATH		=	srcs/
+
+OBJS		= 	$(addprefix $(PATH), $(SRCS))
+
+HEADERS		=	headers/.
 
 NAME		=	push_swap
-
-OBJS		=	${SRC:.c=.o}
 
 RM			=	/bin/rm -f
 
 CC			=	clang
 
-CFLAGS		=	-Wall -Wextra -Werror
+CFLAGS		=	-Wall -Wextra -Werror -I $(HEADERS)
 
-LIBFT		=	srcs/libft/libft.a
+all:			$(NAME)
 
-GNL			=	srcs/gnl/get_next_line.c
+$(NAME):		$(OBJS)
 
-all:		$(NAME)
+%.o: %.c	
+				$(CC) $(CFLAGS) -s $< -o $@
 
-$(NAME):	$(OBJS)
+push_swap:		$(NAME)
 
-%.o: %.c
-			$(CC) $(CFLAGS) -s $< -o $@
-
-push_swap:	$(NAME)
-
-checker:	$(NAME)
+checker:		$(NAME)
 
 clean:
-			$(RM) $(OBJS)
+				$(RM) $(OBJS)
 
-fclean:		clean
-			$(RM) $(NAME)
+fclean:			clean
+				$(RM) $(NAME)
 
-re:			fclean all
+re:				fclean all
 
-.PHONY:		all clean fclean re bonus checker push_swap
+.PHONY:			all clean fclean re bonus checker push_swap
