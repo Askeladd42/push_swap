@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/04 09:00:36 by plam              #+#    #+#             */
-/*   Updated: 2021/10/04 09:05:21 by plam             ###   ########.fr       */
+/*   Updated: 2021/10/04 09:38:38 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,23 +22,25 @@ struct		t_lst
 	t_lst	*prev;
 };
 
-/*
-** malloc new lst
-*/
-
 t_lst		*add_first_lst(int data, t_lst *next);
 t_lst		*add_last_lst(int data, t_lst *last);
 
-/*
-** free and remove
-*/
-
 void		free_all_lst(t_lst	*l);
 
-/*
-** utils for lst
-*/
-
 t_lst		*get_last_lst(t_lst	*l);
+
+typedef struct s_stk		t_stk;
+
+struct		s_stk
+{
+	t_lst	*first;
+	t_lst	*last;
+	int		size;
+};
+
+t_stk		*malloc_stack(t_lst *first, t_lst *last, int size);
+void		free_stack(t_stk *stk);
+
+t_stk		*generate_stack_a_content(char **srcs, int size);
 
 #endif
