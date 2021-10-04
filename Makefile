@@ -6,11 +6,11 @@
 #    By: plam <plam@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/03/15 11:29:08 by plam              #+#    #+#              #
-#    Updated: 2021/10/04 15:38:49 by plam             ###   ########.fr        #
+#    Updated: 2021/10/04 15:40:01 by plam             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRC			=	$(GNL)\
+SRCS			=	$(GNL)\
 				checker.c		r.c\
 				push_swap.c		s.c\
 				free_stack.c	p.c\
