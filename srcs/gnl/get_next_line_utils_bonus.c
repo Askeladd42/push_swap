@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line_utils.c                              :+:      :+:    :+:   */
+/*   get_next_line_utils_bonus.c                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/25 10:08:14 by plam              #+#    #+#             */
-/*   Updated: 2019/11/28 10:35:05 by plam             ###   ########.fr       */
+/*   Updated: 2019/11/26 11:20:04 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "get_next_line_bonus.h"
 
 void	ft_memmove(void *dest, const void *src, size_t n)
 {
@@ -68,24 +68,38 @@ char	*ft_strcjoin(char *s1, char *s2)
 	return (dest);
 }
 
-int		checker(char *line)
+t_list	*ft_lstnew_back(int fd, t_list **l1)
 {
-	int i;
+	t_list	*elem;
+	t_list	*lst;
 
-	i = 0;
-	while (line[i])
+	lst = *l1;
+	if (!(elem = (t_list *)malloc(sizeof(t_list))))
+		return (NULL);
+	elem->line[0] = '\0';
+	elem->next = NULL;
+	elem->fd = fd;
+	if (*l1 == NULL)
+		*l1 = elem;
+	else
 	{
-		if (line[i] == '\n')
-			return (i);
-		i++;
+		while (lst->next != NULL)
+			lst = lst->next;
+		lst->next = elem;
 	}
-	return (-1);
+	return (elem);
 }
 
-int		erase_err(char **line)
+t_list	*find_lst(int fd, t_list **l1)
 {
-	if (*line)
-		free(*line);
-	*line = NULL;
-	return (-1);
+	t_list	*lst;
+
+	lst = *l1;
+	while (lst != NULL)
+	{
+		if (lst->fd == fd)
+			return (lst);
+		lst = lst->next;
+	}
+	return (ft_lstnew_back(fd, l1));
 }

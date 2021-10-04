@@ -6,56 +6,34 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/25 10:07:36 by plam              #+#    #+#             */
-/*   Updated: 2021/01/11 10:35:45 by plam             ###   ########.fr       */
+/*   Updated: 2019/11/27 16:54:36 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 
-int	clean(char **line)
+int		get_next_line(int fd, char **line)
 {
-	if (*line)
-		free(*line);
-	*line = NULL;
-	return (-1);
-}
+	static t_list	lst;
+	int				err;
 
-int	get_next_loop(t_buff *lst, char **line, int nread, int fd)
-{
-	while (ft_strclen(lst->buff, '\n') == -1)
+	*line = NULL;
+	if (!line || fd < 0)
+		return (-1);
+	if (lst.line[0] != '\0')
+		if (!(*line = ft_strcjoin(*line, lst.line)))
+			return (erase_err(line));
+	while (checker(lst.line) == -1)
 	{
-		nread = read(fd, lst->buff, BUFFER_SIZE);
-		if (nread < 0)
-			return (clean(line));
-		lst->buff[nread] = '\0';
-		*line = ft_strcjoin(*line, lst->buff);
-		if (*line == NULL)
-			return (clean(line));
-		if (nread == 0)
+		if ((err = read(fd, lst.line, BUFFER_SIZE)) == -1)
+			return (erase_err(line));
+		lst.line[err] = '\0';
+		if (!(*line = ft_strcjoin(*line, lst.line)))
+			return (erase_err(line));
+		if (err == 0)
 			return (0);
 	}
-	return (1);
-}
-
-int	get_next_line(int fd, char **line)
-{
-	static t_buff	lst;
-	int				nread;
-
-	*line = NULL;
-	nread = 0;
-	if (line == NULL || fd < 0 || BUFFER_SIZE <= 0)
-		return (clean(line));
-	if (ft_strclen(lst.buff, '\0') > 0)
-	{
-		*line = ft_strcjoin(*line, lst.buff);
-		if (*line == NULL)
-			return (clean(line));
-	}
-	nread = get_next_loop(&lst, line, nread, fd);
-	if (nread != 1)
-		return (nread);
-	nread = ft_strclen(lst.buff + ft_strclen(lst.buff, '\n'), '\0') + 1;
-	ft_memcmove(lst.buff, lst.buff + ft_strclen(lst.buff, '\n') + 1, nread);
+	ft_memmove(lst.line, lst.line + checker(lst.line) + 1, \
+		ft_strlen(lst.line + checker(lst.line) + 1) + 1);
 	return (1);
 }

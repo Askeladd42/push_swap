@@ -6,20 +6,19 @@
 #    By: plam <plam@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/03/15 11:29:08 by plam              #+#    #+#              #
-#    Updated: 2021/10/04 15:40:01 by plam             ###   ########.fr        #
+#    Updated: 2021/10/04 15:58:30 by plam             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS			=	$(GNL)\
-				checker.c		r.c\
+SRCS		+=	gnl/get_next_line.c\
+				gnl/get_next_line_utils.c
+
+SRCS		+=	checker.c		r.c\
 				push_swap.c		s.c\
 				free_stack.c	p.c\
 				check_info.c	rr.c
 
 LIBFT		=	srcs/libft
-
-GNL			=	gnl/get_next_line.c\
-				gnl/get_next_line_utils.c
 
 PATH		=	srcs/
 
@@ -33,19 +32,21 @@ RM			=	/bin/rm -f
 
 CC			=	clang
 
-CFLAGS		=	-Wall -Wextra -Werror -I $(HEADERS)
+CFLAGS		=	-g -Wall -Wextra -Werror -I $(HEADERS)
 
-all:			$(NAME)
+all:			$(LIBFT) $(NAME)
 
 $(NAME):		$(OBJS)
-				@cd $(LIBFT) && $(MAKE) && $(MAKE) bonus && $(MAKE) clean
 				$(CC) $(CFLAGS) $(OBJS) -o $(NAME)
 
+$(LIBFT):
+				@cd $(LIBFT) && $(MAKE) && $(MAKE) bonus && $(MAKE) clean
+
 %.o: %.c	
-				$(CC) $(CFLAGS) -s $< -o $@
+				$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
-				$(RM) $(OBJS)
+				$(RM) $(OBJS:.o)
 
 fclean:			clean
 				$(RM) $(NAME)
