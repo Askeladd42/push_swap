@@ -6,11 +6,12 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/02 14:28:50 by plam              #+#    #+#             */
-/*   Updated: 2021/04/05 18:06:03 by plam             ###   ########.fr       */
+/*   Updated: 2021/10/05 13:19:12 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "stack.h"
+#include "instructions.h"
 
 int	check_info(char *arg)
 {
@@ -32,7 +33,7 @@ int	check_info(char *arg)
 	return (i - 1);
 }
 
-void	rec_info(char *arg, t_stack stack)
+int	rec_info(char *arg, t_stk stk)
 {
 	int	i;
 	int	size;
@@ -43,14 +44,14 @@ void	rec_info(char *arg, t_stack stack)
 		return (ERR);
 	}
 	size = check_info(arg);
-	stack.a = malloc(sizeof(int) * size);
-	if (stack.a == NULL)
-		return;
-	stack.b = malloc(sizeof(int) * size);
+	stk.a = malloc(sizeof(int) * size);
+	if (stk.first == NULL)
+		return (NULL);
+	stk.b = malloc(sizeof(int) * size);
 	i = 0;
 	while (i < size)
 	{
-		stack.b[i] = NULL;
+		stack.last[i] = NULL;
 		while (*arg)
 		{
 			if (*arg >= '0' && *arg <= '9')
@@ -59,5 +60,6 @@ void	rec_info(char *arg, t_stack stack)
 				*arg++;
 		}
 	}
-	stack.a[i] = NULL;
+	stk.first[i] = NULL;
+	return (OK);
 }

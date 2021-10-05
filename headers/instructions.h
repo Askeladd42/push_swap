@@ -6,16 +6,19 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/04 12:39:04 by plam              #+#    #+#             */
-/*   Updated: 2021/10/04 13:29:16 by plam             ###   ########.fr       */
+/*   Updated: 2021/10/05 13:17:21 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef INSTRUCTIONS_H
 # define INSTRUCTIONS_H
 
+# define OK 1
+# define ERR -1
+
 # include "stack.h"
 
-#include <stdio.h>
+# include <stdio.h>
 
 void	pa(t_stk *stk);
 void	pb(t_stk *stk);
