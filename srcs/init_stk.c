@@ -1,29 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   free_stack.c                                       :+:      :+:    :+:   */
+/*   init_stk.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/04 11:59:37 by plam              #+#    #+#             */
-/*   Updated: 2021/04/08 15:36:15 by plam             ###   ########.fr       */
+/*   Created: 2021/10/05 11:34:31 by plam              #+#    #+#             */
+/*   Updated: 2021/10/05 11:36:28 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "stack.h"
 
-void	free_stack(t_stack stack)
+t_stk	*malloc_stack(t_lst *first, t_lst *last, int size)
 {
-	int	i;
+	t_stk		*res;
 
-	i = 0;
-	while (i < stack.size)
+	res = (t_stk *)malloc(sizeof(t_stk));
+	if (res == NULL)
 	{
-		free(stack.a[i]);
-		free(stack.b[i]);
-		i++;
+		error_push_swap();
+		return (NULL);
 	}
-	free(stack.a);
-	free(stack.b);
-	free(&stack);
+	res->first = first;
+	res->last = last;
+	res->size = size;
+	return (res);
+}
+
+void	free_stack(t_stk *stk)
+{
+	if (stk)
+	{
+		if (stk->first)
+			free_all_lst(stk->first);
+		free(stk);
+	}
 }
