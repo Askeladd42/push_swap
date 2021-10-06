@@ -1,40 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   check_info.c                                       :+:      :+:    :+:   */
+/*   stk_creation.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/03/25 16:54:17 by plam              #+#    #+#             */
-/*   Updated: 2021/10/06 14:28:57 by plam             ###   ########.fr       */
+/*   Created: 2021/10/06 14:29:54 by plam              #+#    #+#             */
+/*   Updated: 2021/10/06 14:33:08 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "stack.h"
+#include "instructions.h"
 
-int	check_info(char *arg)
+t_stk	*generate_stk_a_content(char **srcs, int size)
 {
-	int	i;
+	t_stk	*stk;
 
-	i = 0;
-	if (arg == NULL)
+	stk = malloc_stk(, NULL, size);
+	while (*srcs)
 	{
-		printf("No arguments given.\n");
-		return (0);
+		
 	}
-	while (*arg)
-	{
-		while (*arg >= '0' && *arg <= '9')
-			*arg++;
-		if (*arg == ' ' || *arg == '\0')
-			i++;
-	}
-	return (i);
-}
-
-void	record_info()
-
-void	put_info(t_stk *stk)
-{
-	return;
+	return (stk);
 }
