@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/06 14:29:54 by plam              #+#    #+#             */
-/*   Updated: 2021/10/06 14:33:08 by plam             ###   ########.fr       */
+/*   Updated: 2021/10/06 14:42:59 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,9 @@ t_stk	*generate_stk_a_content(char **srcs, int size)
 	stk = malloc_stk(, NULL, size);
 	while (*srcs)
 	{
-		
+		stk->first=ft_atoi(*srcs);
+		*srcs++;
 	}
+	stk->size = size;
 	return (stk);
 }
