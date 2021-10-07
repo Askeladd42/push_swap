@@ -6,14 +6,14 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/02 14:28:50 by plam              #+#    #+#             */
-/*   Updated: 2021/10/05 13:19:12 by plam             ###   ########.fr       */
+/*   Updated: 2021/10/07 14:10:50 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "stack.h"
 #include "instructions.h"
 
-int	check_info(char *arg)
+/*int	check_info(char *arg)
 {
 	int	i;
 
@@ -62,4 +62,16 @@ int	rec_info(char *arg, t_stk stk)
 	}
 	stk.first[i] = NULL;
 	return (OK);
+}
+*/
+
+int	main(int ac, char **av)
+{
+	t_stk	stk;
+
+	if (ac > 1)
+	{
+		stk = init_stk(NULL, NULL, ac);
+	}
+	return (0);
 }
