@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/02 14:28:50 by plam              #+#    #+#             */
-/*   Updated: 2021/10/07 14:10:50 by plam             ###   ########.fr       */
+/*   Updated: 2021/10/07 14:19:37 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,7 +71,8 @@ int	main(int ac, char **av)
 
 	if (ac > 1)
 	{
-		stk = init_stk(NULL, NULL, ac);
+		if (str_is_digits(++*av) == FALSE)
+			exit_error_push_swap();
 	}
 	return (0);
 }
