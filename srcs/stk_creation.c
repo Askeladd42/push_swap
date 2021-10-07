@@ -6,12 +6,48 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/06 14:29:54 by plam              #+#    #+#             */
-/*   Updated: 2021/10/06 14:42:59 by plam             ###   ########.fr       */
+/*   Updated: 2021/10/07 09:52:02 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "stack.h"
 #include "instructions.h"
+
+
+#include "push_swap_common.h"
+
+int	str_is_digits(char *str)
+{
+	size_t	i;
+
+	i = 0;
+	if (str[i] == '-')
+	{
+		i++;
+		if (!ft_isdigit(str[i]))
+			return (FALSE);
+	}
+	while (str && str[i])
+	{
+		if (!ft_isdigit(str[i]))
+			return (FALSE);
+		i++;
+	}
+	return (TRUE);
+}
+
+
+t_lst	*get_last_lst(t_lst *l)
+{
+	t_lst	*last;
+
+	if (!l)
+		return (NULL);
+	last = l;
+	while (last->next)
+		last = last->next;
+	return (last);
+}
 
 t_stk	*generate_stk_a_content(char **srcs, int size)
 {
