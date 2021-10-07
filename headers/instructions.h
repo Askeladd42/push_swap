@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/04 12:39:04 by plam              #+#    #+#             */
-/*   Updated: 2021/10/05 13:17:21 by plam             ###   ########.fr       */
+/*   Updated: 2021/10/07 12:06:47 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 
 # include "stack.h"
 
+# include <unistd.h>
 # include <stdio.h>
 
 void	pa(t_stk *stk);
