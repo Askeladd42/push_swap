@@ -6,17 +6,14 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/06 14:29:54 by plam              #+#    #+#             */
-/*   Updated: 2021/10/07 09:52:02 by plam             ###   ########.fr       */
+/*   Updated: 2021/10/07 11:38:06 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "stack.h"
 #include "instructions.h"
 
-
-#include "push_swap_common.h"
-
-int	str_is_digits(char *str)
+int		str_is_digits(char *str)
 {
 	size_t	i;
 
