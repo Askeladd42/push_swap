@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   stk_check.c                                        :+:      :+:    :+:   */
+/*   lst_check.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/07 12:05:23 by plam              #+#    #+#             */
-/*   Updated: 2021/10/11 09:55:57 by plam             ###   ########.fr       */
+/*   Updated: 2021/10/11 10:04:09 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,8 +38,8 @@ static int	is_duplicate_data(t_lst *lst)
 }
 
 /*
-** get integer values with atoi
-** if is good integer(atoi i return true or false) -> return malloc(lst)
+** record integer values with atoi
+** if correct integer(atoi i return true or false) -> return malloc(lst)
 */
 
 static t_lst	*atoi_to_lst(char *src, t_lst *last)
@@ -55,7 +55,7 @@ static t_lst	*atoi_to_lst(char *src, t_lst *last)
 }
 
 /*
-** get all values into lst *
+** record all values into lst *
 */
 
 static t_lst	*get_all_values_to_lst(char **src, int size)
@@ -83,12 +83,12 @@ static t_lst	*get_all_values_to_lst(char **src, int size)
 }
 
 /*
-**	get integers from each string && store them in lst in stack a
+**	record integers from each string && store them in lst in stk a
 **
-** 		char *(srcs) : all character string already split
-**					which must be convert into int
-**		check if duplicate value
-**		return : generate stack a
+** 		char *(srcs) : all character strings are already split
+**					and must be convert into int
+**		check if there are duplicate values
+**		return : generate stk a
 */
 
 t_stack	*generate_stack_a_content(char **srcs, int size)
@@ -99,7 +99,7 @@ t_stack	*generate_stack_a_content(char **srcs, int size)
 	l = get_all_values_to_lst(srcs, size);
 	if (!l)
 		return (NULL);
-	if (is_duplicate_data(l) == true)
+	if (is_duplicate_data(l) == TRUE)
 	{
 		free_all_lst(l);
 		error_push_swap();
