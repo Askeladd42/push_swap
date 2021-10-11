@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/05 11:32:55 by plam              #+#    #+#             */
-/*   Updated: 2021/10/05 11:33:54 by plam             ###   ########.fr       */
+/*   Updated: 2021/10/11 09:52:42 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,10 +56,6 @@ t_lst	*add_last_lst(int data, t_lst *last)
 		last->next = add;
 	return (add);
 }
-
-/*
-** free all l and next l;
-*/
 
 void	free_all_lst(t_lst *l)
 {
