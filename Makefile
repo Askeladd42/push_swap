@@ -6,7 +6,7 @@
 #    By: plam <plam@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/03/15 11:29:08 by plam              #+#    #+#              #
-#    Updated: 2021/10/07 11:59:05 by plam             ###   ########.fr        #
+#    Updated: 2021/10/12 17:42:22 by plam             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,9 +14,10 @@ SRCS		+=	gnl/get_next_line.c\
 				gnl/get_next_line_utils.c
 
 SRCS		+=	checker.c		r.c		errors.c\
-				push_swap.c		s.c		int_lst.c\
-				free_stack.c	p.c		init_stk.c\
-				check_info.c	rr.c	stk_creation.c
+				check_info.c	s.c		int_lst.c\
+				push_swap.c		p.c		init_stk.c\
+				lst_check.c		rr.c	stk_creation.c\
+				lst_creation.c	
 
 LIBFT		=	libft/libft.a
 
