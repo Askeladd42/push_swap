@@ -6,12 +6,31 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/02 14:28:50 by plam              #+#    #+#             */
-/*   Updated: 2021/10/07 14:19:37 by plam             ###   ########.fr       */
+/*   Updated: 2021/10/14 10:15:23 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "stack.h"
 #include "instructions.h"
+
+void	swap_int(int *a, int *b)
+{
+	int		tmp;
+
+	tmp = *a;
+	*a = *b;
+	*b = tmp;
+}
+
+static void	rotate_lst(t_lst **first, t_lst **last)
+{
+	(*first)->prev = *last;
+	*first = (*first)->next;
+	(*last)->next = (*first)->prev;
+	*last = (*last)->next;
+	(*first)->prev = NULL;
+	(*last)->next = NULL;
+}
 
 /*int	check_info(char *arg)
 {
