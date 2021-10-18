@@ -6,7 +6,7 @@
 #    By: plam <plam@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/03/15 11:29:08 by plam              #+#    #+#              #
-#    Updated: 2021/10/12 17:42:22 by plam             ###   ########.fr        #
+#    Updated: 2021/10/18 14:37:16 by plam             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,7 @@ SRCS		+=	checker.c		r.c		errors.c\
 				check_info.c	s.c		int_lst.c\
 				push_swap.c		p.c		init_stk.c\
 				lst_check.c		rr.c	stk_creation.c\
-				lst_creation.c	
+				lst_creation.c	instructions.c
 
 LIBFT		=	libft/libft.a
 
