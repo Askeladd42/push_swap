@@ -6,23 +6,34 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/28 14:58:10 by plam              #+#    #+#             */
-/*   Updated: 2021/10/04 13:15:02 by plam             ###   ########.fr       */
+/*   Updated: 2021/10/18 13:21:03 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "stack.h"
 #include "instructions.h"
 
-void	ra(t_stk *stk)
+void	ra(t_stk *a)
 {
-	printf("%s\n", "ss");
+	if (a->size > 1)
+	{
+		rot_lst(&a->first, &a->last);
+		printf("%s\n", "ra");
+	}
 }
 
-void	rb(t_stk *stk)
+void	rb(t_stk *b)
 {
-	printf("%s\n", "ss");
+	if (b->size > 1)
+	{
+		rot_lst(&b->first, &b->last);
+		printf("%s\n", "rb");
+	}
 }
 
-void	rr(t_stk *stk)
+void	rr(t_stk *a, t_stk *b)
 {
-	printf("%s\n", "ss");
+	ra(a);
+	rb(b);
+	printf("%s\n", "rr");
 }

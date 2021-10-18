@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/28 15:00:10 by plam              #+#    #+#             */
-/*   Updated: 2021/10/04 13:14:41 by plam             ###   ########.fr       */
+/*   Updated: 2021/10/18 13:11:37 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,15 @@
 
 void	rra(t_stk *stk)
 {
-	printf("%s\n", "ss");
+	printf("%s\n", "rra");
 }
 
 void	rrb(t_stk *stk)
 {
-	printf("%s\n", "ss");
+	printf("%s\n", "rrb");
 }
 
 void	rrr(t_stk *stk)
 {
-	printf("%s\n", "ss");
+	printf("%s\n", "rrr");
 }
