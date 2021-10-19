@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/02 14:28:50 by plam              #+#    #+#             */
-/*   Updated: 2021/10/19 14:56:23 by plam             ###   ########.fr       */
+/*   Updated: 2021/10/19 15:10:15 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,9 +78,11 @@ int	main(int ac, char **av)
 			exit_error_push_swap();
 		else
 		{
-			a = malloc_stk(NULL, NULL, check_info(*av));
-			b = malloc_stk(NULL, NULL, check_info(*av));
+			a = malloc_stk(NULL, NULL, check_info(av[1]));
+			b = malloc_stk(NULL, NULL, check_info(av[1]));
 		}
+		create_lst();										// to complete with the number lists
+		get_all_values_to_lst(av, check_info(av[1]));
 	}
 	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/25 16:54:17 by plam              #+#    #+#             */
-/*   Updated: 2021/10/19 14:51:40 by plam             ###   ########.fr       */
+/*   Updated: 2021/10/19 15:10:27 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,9 +51,3 @@ int	final_checker_order(t_stack *a, t_stack *b)
 	return (check_order(a->first));
 }
 
-void	record_info()
-
-void	put_info(t_stk *stk)
-{
-	return;
-}
