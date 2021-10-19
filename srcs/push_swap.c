@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/02 14:28:50 by plam              #+#    #+#             */
-/*   Updated: 2021/10/18 13:12:32 by plam             ###   ########.fr       */
+/*   Updated: 2021/10/19 14:56:23 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,12 +67,20 @@ int	rec_info(char *arg, t_stk stk)
 
 int	main(int ac, char **av)
 {
-	t_stk	stk;
+	t_stk	a;
+	t_stk	b;
 
 	if (ac > 1)
 	{
 		if (str_is_digits(++*av) == FALSE)
 			exit_error_push_swap();
+		if (check_info(*av) == FALSE)
+			exit_error_push_swap();
+		else
+		{
+			a = malloc_stk(NULL, NULL, check_info(*av));
+			b = malloc_stk(NULL, NULL, check_info(*av));
+		}
 	}
 	return (0);
 }

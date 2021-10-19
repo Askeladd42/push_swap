@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/18 14:43:53 by plam              #+#    #+#             */
-/*   Updated: 2021/10/18 16:17:19 by plam             ###   ########.fr       */
+/*   Updated: 2021/10/19 14:40:49 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,5 +15,7 @@
 
 # include <unistd.h>
 #include "instructions.h"
+
+int	check_info(char *arg);
 
 #endif
