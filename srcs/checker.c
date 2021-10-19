@@ -6,11 +6,12 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/15 11:29:27 by plam              #+#    #+#             */
-/*   Updated: 2021/04/08 15:37:45 by plam             ###   ########.fr       */
+/*   Updated: 2021/10/19 15:17:54 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "stack.h"
+#include "instructions.h"
 
 int	checker(int	*data)
 {

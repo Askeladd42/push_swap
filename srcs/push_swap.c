@@ -6,12 +6,13 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/02 14:28:50 by plam              #+#    #+#             */
-/*   Updated: 2021/10/19 15:10:15 by plam             ###   ########.fr       */
+/*   Updated: 2021/10/19 15:18:11 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "stack.h"
 #include "instructions.h"
+#include "push_swap.h"
 
 /*int	check_info(char *arg)
 {
