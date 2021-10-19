@@ -6,7 +6,7 @@
 #    By: plam <plam@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/03/15 11:29:08 by plam              #+#    #+#              #
-#    Updated: 2021/10/18 14:37:16 by plam             ###   ########.fr        #
+#    Updated: 2021/10/19 13:17:58 by plam             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,7 +25,7 @@ PATH		=	srcs/
 
 OBJS		= 	$(addprefix $(PATH), $(SRCS:.c=.o))
 
-HEADERS		=	headers/.
+HEADERS		=	headers/
 
 NAME		=	push_swap
 
