@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/18 13:11:03 by plam              #+#    #+#             */
-/*   Updated: 2021/10/18 13:13:59 by plam             ###   ########.fr       */
+/*   Updated: 2021/10/19 17:35:59 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,4 +54,9 @@ static void	push_stk(t_stk *to_push, t_stk *stk)
 	if (stk->first)
 		stk->first->prev = tmp;
 	stk->first = tmp;
+}
+
+void	print_instr(void)
+{
+	return;
 }

@@ -6,14 +6,14 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/15 11:29:27 by plam              #+#    #+#             */
-/*   Updated: 2021/10/19 15:17:54 by plam             ###   ########.fr       */
+/*   Updated: 2021/10/19 17:07:28 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "stack.h"
 #include "instructions.h"
 
-int	checker(int	*data)
+int		checker(int	*data)
 {
 	if (get_next_line(0, stdin) > 0)
 		printf("%s\n", stdin);
@@ -42,7 +42,7 @@ void	check_sort(char *s_type, char *s_data)
 			printf("KO\n");
 	
 }
-int	main(int ac, char **av)
+int		main(int ac, char **av)
 {
 	int	inst;
 
