@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/28 15:00:10 by plam              #+#    #+#             */
-/*   Updated: 2021/10/18 16:19:09 by plam             ###   ########.fr       */
+/*   Updated: 2021/10/21 15:23:29 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,9 +24,21 @@ void	rrb(t_stk *b)
 		inv_rot_lst(&b->first, &b->last);
 }
 
+int	print_rra(t_stk *a)
+{
+	write("ra\n", 3);
+	rra(a);
+}
+
+int	print_rrb(t_stk *a)
+{
+	write("rrb\n", 3);
+	rrb(b);
+}
+
 void	rrr(t_stk *a, t_stk *b)
 {
+	printf("%s\n", "rrr");
 	rra(a);
 	rrb(b);
-	printf("%s\n", "rrr");
 }
