@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/04 12:39:04 by plam              #+#    #+#             */
-/*   Updated: 2021/10/19 13:16:06 by plam             ###   ########.fr       */
+/*   Updated: 2021/10/21 13:19:28 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,9 @@
 
 # define OK 1
 # define ERR -1
+# define INT_MAX 2147483647
+# define INT_MIN -2147483648
+# define ERROR "Error\n"
 
 # include "stack.h"
 
