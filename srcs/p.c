@@ -6,10 +6,11 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/28 15:02:25 by plam              #+#    #+#             */
-/*   Updated: 2021/10/18 16:20:09 by plam             ###   ########.fr       */
+/*   Updated: 2021/10/21 15:26:13 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "stack.h"
 #include "instructions.h"
 
 void	pa(t_stk *a, t_stk *b)
