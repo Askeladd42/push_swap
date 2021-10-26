@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/04 12:39:04 by plam              #+#    #+#             */
-/*   Updated: 2021/10/26 12:00:52 by plam             ###   ########.fr       */
+/*   Updated: 2021/10/26 12:03:15 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,8 @@ void	rr(t_stk *a, t_stk *b);
 void	rra(t_stk *a);
 void	rrb(t_stk *b);
 void	rrr(t_stk *a, t_stk *b);
+
+int		print_cond(t_stk *a, t_stk *b);
 
 void	error_push_swap(void);
 void	exit_error_push_swap(void);
