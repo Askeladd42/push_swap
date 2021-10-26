@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/04 12:39:04 by plam              #+#    #+#             */
-/*   Updated: 2021/10/26 12:03:15 by plam             ###   ########.fr       */
+/*   Updated: 2021/10/26 15:00:02 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,8 +29,8 @@ static void	inv_rot_lst(t_lst **first, t_lst **last);
 void		swap_int(int *a, int *b);
 static void	push_stk(t_stk *to_push, t_stk *stk);
 
-void	pa(t_stk *a);
-void	pb(t_stk *b);
+void	pa(t_stk *a, t_stk *b);
+void	pb(t_stk *a, t_stk *b);
 
 void	sa(t_stk *a);
 void	sb(t_stk *b);

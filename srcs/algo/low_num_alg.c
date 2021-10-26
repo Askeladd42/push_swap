@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/26 13:25:32 by plam              #+#    #+#             */
-/*   Updated: 2021/10/26 14:44:53 by plam             ###   ########.fr       */
+/*   Updated: 2021/10/26 15:09:57 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,9 +28,9 @@ void	size_3_alg_part(t_stk *a)
 	}
 }
 
-int		size_3_alg(t_stk *a, t_stk *b)
+int		size_3_alg(t_stk *a)
 {
-	if (a->size != 3 || b->size != 3)
+	if (a->size != 3)
 		error_push_swap();
 	if (a->first->data > a->first->next->data)
 	{
@@ -49,5 +49,34 @@ int		size_3_alg(t_stk *a, t_stk *b)
 	}
 	else
 		size_3_alg_part(a);
+	return (OK);
+}
+
+void	size_5_alg_part(t_stk *a, t_stk *b)
+{
+	if (b->first->data > b->last->data)
+		print_rb(b);
+	pa(a, b);
+	/*
+		checking if the reintroduced number is in the good place :
+		- if yes : push b again
+		- if no : sort a again in the good order
+	*/
+	pa(a, b);
+	/*
+		checking again if the reintroduced number is in the good place :
+		- if yes : done !
+		- if no : sort a again in the good order
+	*/
+}
+
+int		size_5_alg(t_stk *a, t_stk *b)
+{
+	if (a->size != 5 || b->size != 5)
+		error_push_swap();
+	pb(a, b);
+	pb(a, b);
+	size_3_alg(a);
+	size_5_alg_part(a, b);
 	return (OK);
 }
