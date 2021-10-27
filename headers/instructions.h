@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/04 12:39:04 by plam              #+#    #+#             */
-/*   Updated: 2021/10/26 15:20:07 by plam             ###   ########.fr       */
+/*   Updated: 2021/10/27 11:47:17 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,12 @@ void	pa(t_stk *a, t_stk *b);
 void	pb(t_stk *a, t_stk *b);
 
 int		print_cond(t_stk *a, t_stk *b);
+void	print_ra(t_stk *a);
+void	print_rb(t_stk *b);
+void	print_rra(t_stk *a);
+void	print_rrb(t_stk *b);
+void	print_sa(t_stk *a);
+void	print_sb(t_stk *b);
 
 void	error_push_swap(void);
 void	exit_error_push_swap(void);
