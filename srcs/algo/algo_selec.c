@@ -1,25 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   algo_selec.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/18 14:43:53 by plam              #+#    #+#             */
-/*   Updated: 2021/10/27 11:56:18 by plam             ###   ########.fr       */
+/*   Created: 2021/10/27 11:51:37 by plam              #+#    #+#             */
+/*   Updated: 2021/10/27 11:55:52 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_H
-# define PUSH_SWAP_H
+#include "stack.h"
+#include "instructions.h"
+#include "push_swap.h"
 
-# include <unistd.h>
-# include "libft.h"
-# include "stack.h"
-# include "instructions.h"
+int	select_algo(t_stk a, t_stk b, int size)
+{
+	/* choose which algorithm to use by the size of the list of number :
+	- if 3 to 5 : set_3_alg to set_5_alg
+	- else : general_alg (with optimization of course)
 
-int	check_order(t_lst *l);
-int	check_info(char *arg);
-int	select_algo(t_stk a, t_stk b, int size);
-
-#endif
+	if done correctly : return OK
+	else : return ERR & stop the program
+	*/
+}
