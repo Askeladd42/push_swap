@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/26 13:25:32 by plam              #+#    #+#             */
-/*   Updated: 2021/10/29 16:59:36 by plam             ###   ########.fr       */
+/*   Updated: 2021/10/29 17:48:09 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,7 +65,7 @@ int		size_4_alg(t_stk *a, t_stk *b)
 			print_ra(a);
 		if (a->first->data > a->first->next->data)
 		{
-			if (a->first->data > a->last->prev)
+			if (a->first->data > a->last->prev->data)
 			{	print_rra(a);
 				print_sa(a);
 				print_ra(a);
@@ -102,9 +102,11 @@ void	size_5_alg_part(t_stk *a, t_stk *b)
 			- if yes : done !
 			- if no : sort a again in the good order
 		*/
+		if (a->first->data > a->last->data)
+			print_ra(a);
 		if (a->first->data > a->first->next->data)
 		{
-			if (a->first->data > a->last->prev)
+			if (a->first->data > a->last->prev->data)
 			{	print_rra(a);
 				print_sa(a);
 				print_ra(a);
