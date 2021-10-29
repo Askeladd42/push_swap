@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/26 13:25:32 by plam              #+#    #+#             */
-/*   Updated: 2021/10/29 17:48:09 by plam             ###   ########.fr       */
+/*   Updated: 2021/10/29 18:19:40 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -107,8 +107,12 @@ void	size_5_alg_part(t_stk *a, t_stk *b)
 		if (a->first->data > a->first->next->data)
 		{
 			if (a->first->data > a->last->prev->data)
-			{	print_rra(a);
+			{
+				print_rra(a);
 				print_sa(a);
+				//print_rra(a);
+				//print_sa(a);
+				//print_ra(a);
 				print_ra(a);
 				print_ra(a);
 			}
