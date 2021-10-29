@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/26 13:25:32 by plam              #+#    #+#             */
-/*   Updated: 2021/10/29 11:41:41 by plam             ###   ########.fr       */
+/*   Updated: 2021/10/29 16:48:33 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,17 +64,25 @@ int		size_4_alg(t_stk *a, t_stk *b)
 		if (a->first->data > a->last->data)
 			print_ra(a);
 		if (a->first->data > a->first->next->data)
-			print_sa(a);
+		{
+			if (a->first->data > a->last->prev)
+			{	print_rra(a);
+				print_sa(a);
+				print_ra(a);
+				print_ra(a);
+			}
+			else
+				print_sa(a);
+		}
 	}
 }
 
 void	size_5_alg_part(t_stk *a, t_stk *b)
 {
-	if (b->first->data > b->last->data)
+	if (b->first->data < b->last->data)
 		print_rb(b);
 	while (check_order(a->first) == FALSE)
 	{
-		pa(a, b);
 		/*
 			checking if the reintroduced number is in the good place :
 			- if yes : push b again
@@ -87,10 +95,17 @@ void	size_5_alg_part(t_stk *a, t_stk *b)
 			- if no : sort a again in the good order
 		*/
 		pa(a, b);
-		if (a->first->data > a->last->data)
-			print_ra(a);
-		if (a->first->data < a->first->next->data)
-			print_sa(a);
+		if (a->first->data > a->first->next->data)
+		{
+			if (a->first->data > a->last->prev)
+			{	print_rra(a);
+				print_sa(a);
+				print_ra(a);
+				print_ra(a);
+			}
+			else
+				print_sa(a);
+		}
 	}
 }
 
@@ -99,8 +114,6 @@ int		size_5_alg(t_stk *a, t_stk *b)
 	if (a->size != 5)
 		error_push_swap();
 	pb(a, b);
-	pb(a, b);
-	size_3_alg(a);
 	size_5_alg_part(a, b);
 	return (OK);
 }
