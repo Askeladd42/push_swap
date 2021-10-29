@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/26 13:25:32 by plam              #+#    #+#             */
-/*   Updated: 2021/10/29 16:53:52 by plam             ###   ########.fr       */
+/*   Updated: 2021/10/29 16:59:36 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,18 +81,27 @@ void	size_5_alg_part(t_stk *a, t_stk *b)
 {
 	while (check_order(a->first) == FALSE)
 	{
+		/* optimization idea :
+		if (b->first->data < b->last->data)
+		{	
+			if (a->first->data > a->first->next->data)
+				rr(a, b);
+			else
+				print_rb(b);
+		}
+		*/
 		/*
 			checking if the reintroduced number is in the good place :
 			- if yes : push b again
 			- if no : sort a again in the good order
 		*/
 		size_4_alg(a, b);
+		pa(a, b);
 		/*
 			checking again if the reintroduced number is in the good place :
 			- if yes : done !
 			- if no : sort a again in the good order
 		*/
-		pa(a, b);
 		if (a->first->data > a->first->next->data)
 		{
 			if (a->first->data > a->last->prev)
@@ -112,13 +121,6 @@ int		size_5_alg(t_stk *a, t_stk *b)
 	if (a->size != 5)
 		error_push_swap();
 	pb(a, b);
-	if (b->first->data < b->last->data)
-	{
-		if (a->first->data > a->first->next->data)
-			rr(a, b);
-		else
-			print_rb(b);
-	}
 	size_5_alg_part(a, b);
 	return (OK);
 }
