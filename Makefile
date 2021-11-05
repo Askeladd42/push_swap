@@ -6,12 +6,15 @@
 #    By: plam <plam@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/03/15 11:29:08 by plam              #+#    #+#              #
-#    Updated: 2021/10/19 13:17:58 by plam             ###   ########.fr        #
+#    Updated: 2021/11/05 15:01:41 by plam             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 SRCS		+=	gnl/get_next_line.c\
 				gnl/get_next_line_utils.c
+
+SRCS		+=	low_num_algo.c\
+				algo_selec.c
 
 SRCS		+=	checker.c		r.c		errors.c\
 				check_info.c	s.c		int_lst.c\
