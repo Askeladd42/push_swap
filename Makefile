@@ -6,7 +6,7 @@
 #    By: plam <plam@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/03/15 11:29:08 by plam              #+#    #+#              #
-#    Updated: 2021/11/17 14:24:12 by plam             ###   ########.fr        #
+#    Updated: 2021/11/17 14:46:11 by plam             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,6 +22,8 @@ SRCS		+=	push_swap.c		r.c				errors.c\
 				instructions.c	print_inst.c	print_inst2.c\
 				lst_creation.c	rr.c			stk_creation.c
 
+MAKE		=	/bin/make
+
 LIBFT		=	libft/libft.a
 
 PATH		=	srcs/
@@ -34,7 +36,7 @@ NAME		=	push_swap
 
 RM			=	/bin/rm -f
 
-CC			=	gcc
+CC			=	/bin/clang
 
 CFLAGS		=	-g -Wall -Wextra -Werror -I $(HEADERS)
 
@@ -44,18 +46,18 @@ $(NAME):		$(LIBFT) $(OBJS)
 				$(CC) $(CFLAGS) $(OBJS) -o $(NAME)
 
 $(LIBFT):
-				make -sC libft
-				make -sC libft bonus
+				$(MAKE) -sC libft
+				$(MAKE) -sC libft bonus
 
 %.o: %.c	
 				$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
-				make -sC libft clean
+				$(MAKE) -sC libft clean
 				$(RM) $(OBJS)
 
 fclean:			clean
-				make -sC libft fclean
+				$(MAKE) -sC libft fclean
 				$(RM) $(NAME)
 
 re:				fclean all
