@@ -27,19 +27,19 @@ void	sb(t_stk *b)
 
 int	print_sa(t_stk *a)
 {
-	write("sa\n", 3);
+	write(1, "sa\n", 3);
 	sa(a);
 }
 
-int	print_sb(t_stk *a)
+int	print_sb(t_stk *b)
 {
-	write("sb\n", 3);
+	write(1, "sb\n", 3);
 	sb(b);
 }
 
 void	ss(t_stk *a, t_stk *b)
 {
-	printf("%s\n", "ss");
+	write(1, "ss\n", 3);
 	sa(a);
 	sb(b);
 }

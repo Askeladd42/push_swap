@@ -26,19 +26,19 @@ void	rrb(t_stk *b)
 
 int	print_rra(t_stk *a)
 {
-	write("ra\n", 3);
+	write(1, "ra\n", 3);
 	rra(a);
 }
 
-int	print_rrb(t_stk *a)
+int	print_rrb(t_stk *b)
 {
-	write("rrb\n", 3);
+	write(1, "rrb\n", 3);
 	rrb(b);
 }
 
 void	rrr(t_stk *a, t_stk *b)
 {
-	printf("%s\n", "rrr");
+	write(1, "rrr\n", 4);
 	rra(a);
 	rrb(b);
 }

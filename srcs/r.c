@@ -25,21 +25,21 @@ void	rb(t_stk *b)
 		rot_lst(&b->first, &b->last);
 }
 
-int	print_ra(t_stk *a)
+void	print_ra(t_stk *a)
 {
-	write("ra\n", 3);
+	write(1, "ra\n", 3);
 	ra(a);
 }
 
-int	print_rb(t_stk *a)
+void	print_rb(t_stk *b)
 {
-	write("rb\n", 3);
+	write(1, "rb\n", 3);
 	rb(b);
 }
 
 void	rr(t_stk *a, t_stk *b)
 {
-	printf("%s\n", "rr");
+	write(1, "rr\n", 3);
 	ra(a);
 	rb(b);
 }
