@@ -17,8 +17,6 @@
 # define FALSE 0
 
 typedef struct s_lst
-
-struct		s_lst
 {
 	int		data;
 	t_lst	*next;
@@ -33,8 +31,6 @@ void		free_all_lst(t_lst	*l);
 t_lst		*get_last_lst(t_lst	*l);
 
 typedef struct s_stk
-
-struct		s_stk
 {
 	t_lst	*first;
 	t_lst	*last;
