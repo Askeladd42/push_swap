@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/25 10:08:14 by plam              #+#    #+#             */
-/*   Updated: 2019/11/28 10:35:05 by plam             ###   ########.fr       */
+/*   Updated: 2021/11/17 13:45:26 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ void	ft_memmove(void *dest, const void *src, size_t n)
 	}
 }
 
-int		ft_strlen(char *str)
+int	ft_strlen(char *str)
 {
 	size_t	i;
 
@@ -68,9 +68,9 @@ char	*ft_strcjoin(char *s1, char *s2)
 	return (dest);
 }
 
-int		checker(char *line)
+int	checker(char *line)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (line[i])
@@ -82,7 +82,7 @@ int		checker(char *line)
 	return (-1);
 }
 
-int		erase_err(char **line)
+int	erase_err(char **line)
 {
 	if (*line)
 		free(*line);

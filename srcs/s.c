@@ -25,13 +25,13 @@ void	sb(t_stk *b)
 		swap_int(&b->first->data, &b->first->next->data);
 }
 
-int	print_sa(t_stk *a)
+void	print_sa(t_stk *a)
 {
 	write(1, "sa\n", 3);
 	sa(a);
 }
 
-int	print_sb(t_stk *b)
+void	print_sb(t_stk *b)
 {
 	write(1, "sb\n", 3);
 	sb(b);

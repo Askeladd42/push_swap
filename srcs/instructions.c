@@ -55,8 +55,3 @@ static void	push_stk(t_stk *to_push, t_stk *stk)
 		stk->first->prev = tmp;
 	stk->first = tmp;
 }
-
-void	print_instr(void)
-{
-	return;
-}

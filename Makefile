@@ -6,7 +6,7 @@
 #    By: plam <plam@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/03/15 11:29:08 by plam              #+#    #+#              #
-#    Updated: 2021/11/05 15:01:41 by plam             ###   ########.fr        #
+#    Updated: 2021/11/17 13:35:30 by plam             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,11 +16,11 @@ SRCS		+=	gnl/get_next_line.c\
 SRCS		+=	low_num_algo.c\
 				algo_selec.c
 
-SRCS		+=	push_swap.c		r.c		errors.c\
-				check_info.c	s.c		int_lst.c\
-				lst_check.c		p.c		init_stk.c\
-				lst_creation.c	rr.c	stk_creation.c\
-				instructions.c
+SRCS		+=	push_swap.c		r.c				errors.c\
+				check_info.c	s.c				int_lst.c\
+				lst_check.c		p.c				init_stk.c\
+				instructions.c	print_inst.c	print_inst2.c\
+				lst_creation.c	rr.c			stk_creation.c
 
 LIBFT		=	libft/libft.a
 

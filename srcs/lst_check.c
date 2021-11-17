@@ -91,7 +91,7 @@ static t_lst	*get_all_values_to_lst(char **src, int size)
 **		return : generate stk a
 */
 
-t_stack	*generate_stack_a_content(char **srcs, int size)
+t_stk	*generate_stack_a_content(char **srcs, int size)
 {
 	t_stk		*a;
 	t_lst		*l;

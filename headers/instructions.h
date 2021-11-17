@@ -67,7 +67,7 @@ void		print_rrb(t_stk *b);
 void		print_sa(t_stk *a);
 void		print_sb(t_stk *b);
 
-void		error_push_swap(void);
+int			error_push_swap(void);
 void		exit_error_push_swap(void);
 
 #endif

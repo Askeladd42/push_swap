@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/05 11:32:55 by plam              #+#    #+#             */
-/*   Updated: 2021/10/11 09:52:42 by plam             ###   ########.fr       */
+/*   Updated: 2021/11/17 13:41:22 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,6 @@ static t_lst	create_lst(int data, t_lst *next, t_lst *prev)
 	l.prev = prev;
 	return (l);
 }
-
 
 t_lst	*add_first_lst(int data, t_lst *next)
 {

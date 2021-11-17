@@ -6,13 +6,13 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/25 10:07:36 by plam              #+#    #+#             */
-/*   Updated: 2019/11/27 16:54:36 by plam             ###   ########.fr       */
+/*   Updated: 2021/11/17 13:48:02 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 
-int		get_next_line(int fd, char **line)
+int	get_next_line(int fd, char **line)
 {
 	static t_list	lst;
 	int				err;

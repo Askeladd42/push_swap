@@ -6,14 +6,14 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/06 14:29:54 by plam              #+#    #+#             */
-/*   Updated: 2021/10/07 14:13:39 by plam             ###   ########.fr       */
+/*   Updated: 2021/11/17 13:42:45 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "stack.h"
 #include "instructions.h"
 
-int		str_is_digits(char *str)
+int	str_is_digits(char *str)
 {
 	size_t	i;
 
@@ -40,7 +40,7 @@ t_stk	*generate_stk_a_content(char **srcs, int size)
 	stk = malloc_stk(stk->first, NULL, size);
 	while (*srcs)
 	{
-		stk->first=ft_atoi(*srcs);
+		stk->first = ft_atoi(*srcs);
 		*srcs++;
 	}
 	stk->size = size;

@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/26 13:25:32 by plam              #+#    #+#             */
-/*   Updated: 2021/10/29 18:19:40 by plam             ###   ########.fr       */
+/*   Updated: 2021/11/17 13:58:44 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ void	size_3_alg_part(t_stk *a)
 	}
 }
 
-int		size_3_alg(t_stk *a)
+int	size_3_alg(t_stk *a)
 {
 	if (a->size != 3)
 		error_push_swap();
@@ -52,7 +52,7 @@ int		size_3_alg(t_stk *a)
 	return (OK);
 }
 
-int		size_4_alg(t_stk *a, t_stk *b)
+int	size_4_alg(t_stk *a, t_stk *b)
 {
 	if (a->size != 4)
 		error_push_swap();
@@ -66,7 +66,8 @@ int		size_4_alg(t_stk *a, t_stk *b)
 		if (a->first->data > a->first->next->data)
 		{
 			if (a->first->data > a->last->prev->data)
-			{	print_rra(a);
+			{
+				print_rra(a);
 				print_sa(a);
 				print_ra(a);
 				print_ra(a);

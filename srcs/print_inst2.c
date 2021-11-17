@@ -1,44 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   rr.c                                               :+:      :+:    :+:   */
+/*   print_inst2.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/28 15:00:10 by plam              #+#    #+#             */
-/*   Updated: 2021/10/21 15:23:29 by plam             ###   ########.fr       */
+/*   Created: 2021/11/17 13:33:01 by plam              #+#    #+#             */
+/*   Updated: 2021/11/17 13:40:05 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "stack.h"
 #include "instructions.h"
-
-void	rra(t_stk *a)
-{
-	if (a->size > 1)
-		inv_rot_lst(&a->first, &a->last);
-}
-
-void	rrb(t_stk *b)
-{
-	if (b->size > 1)
-		inv_rot_lst(&b->first, &b->last);
-}
-
-void	print_rra(t_stk *a)
-{
-	write(1, "ra\n", 3);
-	rra(a);
-}
 
 void	print_rrb(t_stk *b)
 {
-	write(1, "rrb\n", 3);
 	rrb(b);
+	printf("rrb\n");
 }
 
-void	rrr(t_stk *a, t_stk *b)
+void	print_sa(t_stk *a)
 {
-	write(1, "rrr\n", 4);
-	rra(a);
-	rrb(b);
+	sa(a);
+	printf("sa\n");
+}
+
+void	print_sb(t_stk *b)
+{
+	sb(b);
+	printf("sb\n");
 }
