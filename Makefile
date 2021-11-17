@@ -16,11 +16,11 @@ SRCS		+=	gnl/get_next_line.c\
 SRCS		+=	low_num_algo.c\
 				algo_selec.c
 
-SRCS		+=	checker.c		r.c		errors.c\
+SRCS		+=	push_swap.c		r.c		errors.c\
 				check_info.c	s.c		int_lst.c\
-				push_swap.c		p.c		init_stk.c\
-				lst_check.c		rr.c	stk_creation.c\
-				lst_creation.c	instructions.c
+				lst_check.c		p.c		init_stk.c\
+				lst_creation.c	rr.c	stk_creation.c\
+				instructions.c
 
 LIBFT		=	libft/libft.a
 
