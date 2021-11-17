@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/27 11:51:37 by plam              #+#    #+#             */
-/*   Updated: 2021/11/17 13:48:12 by plam             ###   ########.fr       */
+/*   Updated: 2021/11/17 15:39:35 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,5 +22,7 @@ int	select_algo(t_stk a, t_stk b, int size)
 
 	if done correctly : return OK
 	else : return ERR & stop the program
+
+	watch the timsort method, it could be interesting.
 	*/
 }
