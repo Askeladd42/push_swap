@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/26 13:25:32 by plam              #+#    #+#             */
-/*   Updated: 2021/11/17 13:58:44 by plam             ###   ########.fr       */
+/*   Updated: 2021/11/17 14:19:12 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -111,9 +111,9 @@ void	size_5_alg_part(t_stk *a, t_stk *b)
 			{
 				print_rra(a);
 				print_sa(a);
-				//print_rra(a);
-				//print_sa(a);
-				//print_ra(a);
+				print_rra(a);
+				print_sa(a);
+				print_ra(a);
 				print_ra(a);
 				print_ra(a);
 			}
