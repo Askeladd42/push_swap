@@ -6,20 +6,26 @@
 #    By: plam <plam@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/03/15 11:29:08 by plam              #+#    #+#              #
-#    Updated: 2021/11/22 15:05:12 by plam             ###   ########.fr        #
+#    Updated: 2021/11/22 15:16:09 by plam             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 SRCS		+=	gnl/get_next_line.c\
 				gnl/get_next_line_utils.c
 
-SRCS		+=	low_num_algo.c\
-				algo_selec.c
+SRCS		+=	algo/low_num_algo.c\
+				algo/algo_selec.c
 
 SRCS		+=	instructions/r.c\
 				instructions/s.c\
 				instructions/p.c\
 				instructions/rr.c
+
+SRCS		+=	struct/init_stk.c\
+				struct/init_tab.c\
+				struct/tab_check.c\
+				struct/tab_creation.c\
+				struct/stk_creation.c
 
 SRCS		+=	push_swap.c		errors.c\
 				check_info.c	int_lst.c\
