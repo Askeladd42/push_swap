@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/18 13:11:03 by plam              #+#    #+#             */
-/*   Updated: 2021/11/22 15:05:40 by plam             ###   ########.fr       */
+/*   Updated: 2021/11/22 15:08:24 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ void	swap_int(int *a, int *b)
 
 static void	push_stk(t_stk *to_push, t_stk *stk)
 {
-	t_lst	*tmp;
+	t_stk	*tmp;
 
 	tmp = to_push->first;
 	to_push->first = to_push->first->next;
