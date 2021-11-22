@@ -6,11 +6,11 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/27 11:51:37 by plam              #+#    #+#             */
-/*   Updated: 2021/11/17 15:39:35 by plam             ###   ########.fr       */
+/*   Updated: 2021/11/22 15:40:42 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "stack.h"
+#include "struct.h"
 #include "instructions.h"
 #include "push_swap.h"
 
