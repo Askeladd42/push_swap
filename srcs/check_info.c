@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/25 16:54:17 by plam              #+#    #+#             */
-/*   Updated: 2021/11/17 13:42:02 by plam             ###   ########.fr       */
+/*   Updated: 2021/11/22 13:40:52 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,21 @@ int	check_info(char *arg)
 			i++;
 	}
 	return (i);
+}
+
+int check_sort(t_stk *a)
+{
+	int	i;
+	int	tab[a->size];
+
+	i = 0;
+	while (i < a->size)
+	{
+		tab[i] = a->first->data;
+		i++;
+	}
+	i = 0;
+	return (OK);
 }
 
 int	check_order(t_lst *l)
