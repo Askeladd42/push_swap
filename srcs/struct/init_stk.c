@@ -6,11 +6,11 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/05 11:34:31 by plam              #+#    #+#             */
-/*   Updated: 2021/11/17 13:41:46 by plam             ###   ########.fr       */
+/*   Updated: 2021/11/22 15:38:54 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "stack.h"
+#include "struct.h"
 #include "instructions.h"
 
 t_stk	*malloc_stack(t_lst *first, t_lst *last, int size)

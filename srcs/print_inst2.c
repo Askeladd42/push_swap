@@ -6,11 +6,11 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/17 13:33:01 by plam              #+#    #+#             */
-/*   Updated: 2021/11/17 13:40:05 by plam             ###   ########.fr       */
+/*   Updated: 2021/11/22 15:40:09 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "stack.h"
+#include "struct.h"
 #include "instructions.h"
 
 void	print_rrb(t_stk *b)

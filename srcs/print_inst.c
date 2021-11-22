@@ -6,11 +6,11 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/21 13:44:06 by plam              #+#    #+#             */
-/*   Updated: 2021/11/17 13:33:56 by plam             ###   ########.fr       */
+/*   Updated: 2021/11/22 15:40:01 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "stack.h"
+#include "struct.h"
 #include "instructions.h"
 
 /*

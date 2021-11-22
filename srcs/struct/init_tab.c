@@ -6,20 +6,20 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/05 11:32:55 by plam              #+#    #+#             */
-/*   Updated: 2021/11/22 14:50:35 by plam             ###   ########.fr       */
+/*   Updated: 2021/11/22 15:39:07 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "struct.h"
 
-static t_lst	create_tab(char **av, t_tab tab)
+static t_tab	create_tab(char **av, t_tab tab)
 {
 	t_tab	t;
 
-	l.data = data;
-	l.next = next;
-	l.prev = prev;
-	return (l);
+	t.data = data;
+	t.next = next;
+	t.prev = prev;
+	return (t);
 }
 
 t_lst	*add_first_lst(int data, t_lst *next)

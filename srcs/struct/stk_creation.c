@@ -6,11 +6,11 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/06 14:29:54 by plam              #+#    #+#             */
-/*   Updated: 2021/11/17 13:42:45 by plam             ###   ########.fr       */
+/*   Updated: 2021/11/22 15:36:53 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "stack.h"
+#include "struct.h"
 #include "instructions.h"
 
 int	str_is_digits(char *str)

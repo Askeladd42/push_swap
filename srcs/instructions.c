@@ -6,11 +6,11 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/18 13:11:03 by plam              #+#    #+#             */
-/*   Updated: 2021/11/22 15:08:24 by plam             ###   ########.fr       */
+/*   Updated: 2021/11/22 15:36:40 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "stack.h"
+#include "struct.h"
 #include "instructions.h"
 
 static void	rot_lst(t_lst **first, t_lst **last)
