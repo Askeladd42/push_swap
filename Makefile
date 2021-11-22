@@ -6,7 +6,7 @@
 #    By: plam <plam@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/03/15 11:29:08 by plam              #+#    #+#              #
-#    Updated: 2021/11/22 15:16:09 by plam             ###   ########.fr        #
+#    Updated: 2021/11/22 15:23:22 by plam             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,11 +28,8 @@ SRCS		+=	struct/init_stk.c\
 				struct/stk_creation.c
 
 SRCS		+=	push_swap.c		errors.c\
-				check_info.c	int_lst.c\
-				lst_check.c		init_stk.c\
-				lst_creation.c	print_inst.c\
-				instructions.c	print_inst2.c\
-				stk_creation.c
+				check_info.c	print_inst.c\
+				instructions.c	print_inst2.c
 
 MAKE		=	/bin/make
 
