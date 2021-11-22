@@ -1,20 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   init_lst.c                                         :+:      :+:    :+:   */
+/*   init_tab.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/05 11:32:55 by plam              #+#    #+#             */
-/*   Updated: 2021/11/17 13:41:22 by plam             ###   ########.fr       */
+/*   Updated: 2021/11/22 14:50:35 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "stack.h"
+#include "struct.h"
 
-static t_lst	create_lst(int data, t_lst *next, t_lst *prev)
+static t_lst	create_tab(char **av, t_tab tab)
 {
-	t_lst	l;
+	t_tab	t;
 
 	l.data = data;
 	l.next = next;

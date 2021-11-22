@@ -6,71 +6,18 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/02 14:28:50 by plam              #+#    #+#             */
-/*   Updated: 2021/10/19 16:32:06 by plam             ###   ########.fr       */
+/*   Updated: 2021/11/22 14:52:04 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "stack.h"
+#include "struct.h"
 #include "instructions.h"
 #include "push_swap.h"
 
-/*int	check_info(char *arg)
-{
-	int	i;
-
-	i = 0;
-	if (arg == NULL)
-	{
-		printf("Error\n");
-		return (0);
-	}
-	while (*arg)
-	{
-		while (*arg >= '0' && *arg <= '9')
-			*arg++;
-		if (*arg == ' ' || *arg == '\0')
-			i++;
-	}
-	return (i - 1);
-}
-
-int	rec_info(char *arg, t_stk stk)
-{
-	int	i;
-	int	size;
-
-	if (size = check_info(arg) < 1)
-	{
-		write(2, "Error\n", 6);
-		return (ERR);
-	}
-	size = check_info(arg);
-	stk.a = malloc(sizeof(int) * size);
-	if (stk.first == NULL)
-		return (NULL);
-	stk.b = malloc(sizeof(int) * size);
-	i = 0;
-	while (i < size)
-	{
-		stack.last[i] = NULL;
-		while (*arg)
-		{
-			if (*arg >= '0' && *arg <= '9')
-				stack.a[i++] = ft_atoi(*arg);
-			while (*arg == ' ' || *arg == '\0')
-				*arg++;
-		}
-	}
-	stk.first[i] = NULL;
-	return (OK);
-}
-*/
-
 int	main(int ac, char **av)
 {
-	t_stk	a;
-	t_stk	b;
-	t_lst	lst;
+	t_stk	stk;
+	t_tab	tab;
 
 	if (ac > 1)
 	{

@@ -6,12 +6,12 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/25 16:54:17 by plam              #+#    #+#             */
-/*   Updated: 2021/11/22 13:40:52 by plam             ###   ########.fr       */
+/*   Updated: 2021/11/22 14:51:01 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "instructions.h"
-#include "stack.h"
+#include "struct.h"
 
 int	check_info(char *arg)
 {
