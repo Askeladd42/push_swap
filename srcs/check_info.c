@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/25 16:54:17 by plam              #+#    #+#             */
-/*   Updated: 2021/11/22 14:51:01 by plam             ###   ########.fr       */
+/*   Updated: 2021/11/24 00:01:33 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 int	check_info(char *arg)
 {
 	int	i;
+	int cnt;
 
 	i = 0;
 	if (arg == NULL)
@@ -23,41 +24,58 @@ int	check_info(char *arg)
 		printf("No arguments given.\n");
 		return (FALSE);
 	}
-	while (*arg)
+	cnt = 0;
+	while (arg[i])
 	{
-		while (*arg >= '0' && *arg <= '9')
-			*arg++;
-		if (*arg == ' ' || *arg == '\0')
+		while (arg[i] == ' ')
+			i++;
+		if (arg[i] == '-' || arg[i] == '+')
+			i++;
+		if (arg[i] < '0' || arg[i] > '9')
+			return (0);
+		while (arg[i] >= '0' && arg[i] <= '9')
+			i++;
+		cnt++;
+		if (arg[i] != ' ' && arg[i] != '\0')
+			return (0);
+		while (arg[i] == ' ')
 			i++;
 	}
-	return (i);
+	return (cnt);
 }
 
-int check_sort(t_stk *a)
+int	check_args(char **av, t_tab *tab)
 {
 	int	i;
-	int	tab[a->size];
+	int	cnt;
 
-	i = 0;
-	while (i < a->size)
+	i = 1;
+	while (av[i])
 	{
-		tab[i] = a->first->data;
+		cnt = check_info(av[i]);
+		if (cnt == 0)
+			return (ERR);
+		tab->size += cnt;
 		i++;
 	}
-	i = 0;
-	return (OK);
+	return (0);
 }
 
-int	check_order(t_lst *l)
+/*
+int	double_num(t_tab *tab)
 {
-	while (l && l->next)
+	int	i;
+
+	i = 0;
+	while (i < tab->size - 1)
 	{
-		if (l->data > l->next->data)
-			return (FALSE);
-		l = l->next;
+		if (tab->sort[i] == tab->sort[i + 1])
+			return (-1);
+		i++;
 	}
-	return (TRUE);
+	return (0);
 }
+*/
 
 int	final_checker_order(t_stk *a, t_stk *b)
 {
