@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/05 11:34:31 by plam              #+#    #+#             */
-/*   Updated: 2021/11/24 12:33:24 by plam             ###   ########.fr       */
+/*   Updated: 2021/11/24 12:39:25 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,5 +30,5 @@ int	init_stack(t_tab *tab, t_stk *stk)
 		return (-1);
 	stk->first_a = stk->a;
 	target_stack(tab, stk->first_a);
-	return (0);
+	return (OK);
 }
