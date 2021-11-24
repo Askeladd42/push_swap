@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/04 12:39:04 by plam              #+#    #+#             */
-/*   Updated: 2021/11/24 11:22:28 by plam             ###   ########.fr       */
+/*   Updated: 2021/11/24 11:41:40 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,27 +61,27 @@ static void	push_stk(t_stk *to_push, t_stk *stk);
 */
 
 
-void		sa(t_stk *a);
-void		sb(t_stk *b);
-void		ss(t_stk *a, t_stk *b);
+void		sa(t_stk *stk);
+void		sb(t_stk *stk);
+void		ss(t_stk *stk);
 
-void		ra(t_stk *a);
-void		rb(t_stk *b);
-void		rr(t_stk *a, t_stk *b);
+void		ra(t_stk *stk);
+void		rb(t_stk *stk);
+void		rr(t_stk *stk);
 
-void		rra(t_stk *a);
-void		rrb(t_stk *b);
-void		rrr(t_stk *a, t_stk *b);
+void		rra(t_stk *stk);
+void		rrb(t_stk *stk);
+void		rrr(t_stk *stk);
 
-void		pa(t_stk *a, t_stk *b);
-void		pb(t_stk *a, t_stk *b);
+void		pa(t_stk *stk);
+void		pb(t_stk *stk);
 
-int			print_cond(t_stk *a, t_stk *b);
-void		print_ra(t_stk *a);
-void		print_rb(t_stk *b);
-void		print_rra(t_stk *a);
-void		print_rrb(t_stk *b);
-void		print_sa(t_stk *a);
-void		print_sb(t_stk *b);
+int			print_cond(,t_tab *tab, t_stk *stk);
+void		print_ra(t_stk *stk);
+void		print_rb(t_stk *stk);
+void		print_rra(t_stk *stk);
+void		print_rrb(t_stk *stk);
+void		print_sa(t_stk *stk);
+void		print_sb(t_stk *stk);
 
 #endif
