@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/18 14:43:53 by plam              #+#    #+#             */
-/*   Updated: 2021/11/24 11:06:38 by plam             ###   ########.fr       */
+/*   Updated: 2021/11/24 11:25:21 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,15 @@ int	check_order(t_tab *t);
 int check_sort(t_tab *t);
 int	check_info(char *arg);
 int	check_args(char **av, t_tab *tab);
+
+int	first_sort(char **av, t_tab *tab);
+int	create_tab(char **av, t_tab *tab);
+int	*tab_alloc(int size);
+int	*tabdup(int *dest, int *source, int size);
+void	insertion_sort(t_tab *tab);
+
+int	error_push_swap(t_tab tab, t_stk stk);
+
 int	select_algo(t_stk a, t_stk b, int size);
 int	push_swap(t_tab tab, t_stk stk);
 
