@@ -6,35 +6,29 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/05 11:34:31 by plam              #+#    #+#             */
-/*   Updated: 2021/11/22 15:38:54 by plam             ###   ########.fr       */
+/*   Updated: 2021/11/24 12:33:24 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "struct.h"
 #include "instructions.h"
 
-t_stk	*malloc_stack(t_lst *first, t_lst *last, int size)
+t_elm	*init_elm(void)
 {
-	t_stk		*res;
+	t_elm	*elm;
 
-	res = (t_stk *)malloc(sizeof(t_stk));
-	if (res == NULL)
-	{
-		error_push_swap();
-		return (NULL);
-	}
-	res->first = first;
-	res->last = last;
-	res->size = size;
-	return (res);
+	elm = ft_lstnew();
+	if (elm != NULL)
+		elm->push = 0;
+	return (elm);
 }
 
-void	free_stack(t_stk *stk)
+int	init_stack(t_tab *tab, t_stk *stk)
 {
-	if (stk)
-	{
-		if (stk->first)
-			free_all_lst(stk->first);
-		free(stk);
-	}
+	stk->a = create_stack(tab, stk);
+	if (stk->a == NULL)
+		return (-1);
+	stk->first_a = stk->a;
+	target_stack(tab, stk->first_a);
+	return (0);
 }

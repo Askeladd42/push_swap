@@ -6,43 +6,36 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/06 14:29:54 by plam              #+#    #+#             */
-/*   Updated: 2021/11/22 15:36:53 by plam             ###   ########.fr       */
+/*   Updated: 2021/11/24 12:33:34 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "struct.h"
 #include "instructions.h"
 
-int	str_is_digits(char *str)
+
+t_elm	*create_stk(t_tab *tab, t_stk *stk)
 {
-	size_t	i;
+	int		i;
+	t_elm	*first;
+	t_elm	*elm;
 
-	i = 0;
-	if (str[i] == '-')
+	i = 1;
+	elm = init_elm();
+	if (elm == NULL)
+		return (NULL);
+	first = elm;
+	while (i < tab->size)
 	{
+		elm->next = init_elm();
+		if (elm->next == NULL)
+		{
+			stk->first_a = first;
+			return (NULL);
+		}
+		elm = elm->next;
 		i++;
-		if (!ft_isdigit(str[i]))
-			return (FALSE);
 	}
-	while (str && str[i])
-	{
-		if (!ft_isdigit(str[i]))
-			return (FALSE);
-		i++;
-	}
-	return (TRUE);
-}
-
-t_stk	*generate_stk_a_content(char **srcs, int size)
-{
-	t_stk	*stk;
-
-	stk = malloc_stk(stk->first, NULL, size);
-	while (*srcs)
-	{
-		stk->first = ft_atoi(*srcs);
-		*srcs++;
-	}
-	stk->size = size;
-	return (stk);
+	stk->size_a = tab->size;
+	return (first);
 }
