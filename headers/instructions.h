@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/04 12:39:04 by plam              #+#    #+#             */
-/*   Updated: 2021/11/22 14:46:40 by plam             ###   ########.fr       */
+/*   Updated: 2021/11/24 11:10:36 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,21 @@ enum e_move {
 	MOVE_RRB,
 	MOVE_RRR
 };
+
+typedef struct s_move
+{
+	int	sa;
+	int	sb;
+	int	ss;
+	int	pa;
+	int	pb;
+	int	ra;
+	int	rb;
+	int	rr;
+	int	rra;
+	int	rrb;
+	int	rrr;
+}				t_move;
 
 /*static void	rot_lst(t_lst **first, t_lst **last);
 static void	inv_rot_lst(t_lst **first, t_lst **last);

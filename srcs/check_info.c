@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/25 16:54:17 by plam              #+#    #+#             */
-/*   Updated: 2021/11/24 10:50:20 by plam             ###   ########.fr       */
+/*   Updated: 2021/11/24 10:56:38 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,9 +77,9 @@ int	double_num(t_tab *tab)
 }
 */
 
-int	final_checker_order(t_stk *a, t_stk *b)
+int	final_checker_order(t_stk *stk, t_tab *tab)
 {
-	if (b->size != 0)
+	if (stk->size_b != 0)
 		return (FALSE);
-	return (check_order(a->first));
+	return (check_order(stk->a));
 }
