@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/04 09:00:36 by plam              #+#    #+#             */
-/*   Updated: 2021/11/24 11:25:36 by plam             ###   ########.fr       */
+/*   Updated: 2021/11/24 12:12:33 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,5 +92,16 @@ typedef struct s_pos
 	int	old_up_a;
 	int	old_up_b;
 }				t_pos;
+
+int	first_sort(char **av, t_tab *tab);
+int	create_tab(char **av, t_tab *tab);
+int	*tab_alloc(int size);
+int	*tabdup(int *dest, int *source, int size);
+void	insertion_sort(t_tab *tab);
+
+int	init_stack(t_tab *tab, t_stk *stack);
+t_elm	*create_stack(t_tab *tab, t_stk *stack);
+void	target_stack(t_tab *tab, t_elm *elm);
+void	reset_pos(t_pos *pos);
 
 #endif
