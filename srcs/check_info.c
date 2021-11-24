@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/25 16:54:17 by plam              #+#    #+#             */
-/*   Updated: 2021/11/24 00:01:33 by plam             ###   ########.fr       */
+/*   Updated: 2021/11/24 10:50:20 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,12 @@ int	check_info(char *arg)
 	int	i;
 	int cnt;
 
-	i = 0;
 	if (arg == NULL)
 	{
 		printf("No arguments given.\n");
 		return (FALSE);
 	}
+	i = 0;
 	cnt = 0;
 	while (arg[i])
 	{
