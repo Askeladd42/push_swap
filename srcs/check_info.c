@@ -6,23 +6,26 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/25 16:54:17 by plam              #+#    #+#             */
-/*   Updated: 2021/11/24 10:56:38 by plam             ###   ########.fr       */
+/*   Updated: 2021/11/24 11:55:12 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "instructions.h"
 #include "struct.h"
 
+int	n_arg(void)
+{
+	printf("No arguments given.\n");
+	return (FALSE);
+}
+
 int	check_info(char *arg)
 {
 	int	i;
-	int cnt;
+	int	cnt;
 
 	if (arg == NULL)
-	{
-		printf("No arguments given.\n");
-		return (FALSE);
-	}
+		return (n_arg());
 	i = 0;
 	cnt = 0;
 	while (arg[i])

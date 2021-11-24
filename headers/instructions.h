@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/04 12:39:04 by plam              #+#    #+#             */
-/*   Updated: 2021/11/24 11:41:40 by plam             ###   ########.fr       */
+/*   Updated: 2021/11/24 11:51:07 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,7 +76,7 @@ void		rrr(t_stk *stk);
 void		pa(t_stk *stk);
 void		pb(t_stk *stk);
 
-int			print_cond(,t_tab *tab, t_stk *stk);
+int			print_cond(t_tab *tab, t_stk *stk);
 void		print_ra(t_stk *stk);
 void		print_rb(t_stk *stk);
 void		print_rra(t_stk *stk);

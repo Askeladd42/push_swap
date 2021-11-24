@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/27 12:12:42 by plam              #+#    #+#             */
-/*   Updated: 2021/11/24 11:25:45 by plam             ###   ########.fr       */
+/*   Updated: 2021/11/24 11:50:47 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,23 +16,15 @@
 
 int	main(int argc, char *argv[])
 {
-	t_stk		*a;
-	t_stk		*b;
+	t_tab	tab;
+	t_stk	stk;
 
 	if (argc < 2)
 		return (0);
-	a = generate_stack_a_content(argv, argc);
-	if (!a)
+	stk = stk_creation(argv, argc);
+	if (!stk)
 		return (ERR);
-	b = malloc_stack(NULL, NULL, 0);
-	if (!b)
-	{
-		free_stack(a);
-		return (ERR);
-	}
-	select_algo(a, b, a->size);
-	free_stack(a);
-	free_stack(b);
+	free_stack(stk);
 	return (0);
 }
 
