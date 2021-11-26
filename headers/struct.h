@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/04 09:00:36 by plam              #+#    #+#             */
-/*   Updated: 2021/11/26 14:49:54 by plam             ###   ########.fr       */
+/*   Updated: 2021/11/26 15:06:42 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -96,7 +96,7 @@ typedef struct s_pos
 int	first_sort(char **av, t_tab *tab);
 int	create_tab(char **av, t_tab *tab);
 int	*tab_alloc(int size);
-int	*tabdup(int *dest, int *source, int size);
+int	*tabdup(int *dst, int *src, int size);
 void	insertion_sort(t_tab *tab);
 
 int	init_stk(t_tab *tab, t_stk *stk);

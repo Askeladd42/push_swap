@@ -6,40 +6,40 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/28 15:01:35 by plam              #+#    #+#             */
-/*   Updated: 2021/10/21 15:23:46 by plam             ###   ########.fr       */
+/*   Updated: 2021/11/26 15:20:53 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "stack.h"
+#include "struct.h"
 #include "instructions.h"
 
-void	sa(t_stk *a)
+void	sa(t_stk *stk)
 {
-	if (a-> size > 1)
-		swap_int(&a->first->data, &a->first->next->data);
+	if (stk->size_a > 1)
+		swap_int(&stk->first_a, &stk->first_a->next);
 }
 
-void	sb(t_stk *b)
+void	sb(t_stk *stk)
 {
-	if (b-> size > 1)
-		swap_int(&b->first->data, &b->first->next->data);
+	if (stk->size_b > 1)
+		swap_int(&stk->first_b, &stk->first_b->next);
 }
 
-void	print_sa(t_stk *a)
+void	print_sa(t_stk *stk)
 {
 	write(1, "sa\n", 3);
 	sa(a);
 }
 
-void	print_sb(t_stk *b)
+void	print_sb(t_stk *stk)
 {
 	write(1, "sb\n", 3);
-	sb(b);
+	sb(stk);
 }
 
-void	ss(t_stk *a, t_stk *b)
+void	ss(t_stk *stk)
 {
 	write(1, "ss\n", 3);
-	sa(a);
-	sb(b);
+	sa(stk);
+	sb(stk);
 }

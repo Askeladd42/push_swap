@@ -6,39 +6,40 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/28 15:00:10 by plam              #+#    #+#             */
-/*   Updated: 2021/10/21 15:23:29 by plam             ###   ########.fr       */
+/*   Updated: 2021/11/26 15:28:07 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "struct.h"
 #include "instructions.h"
 
-void	rra(t_stk *a)
+void	rra(t_stk *stk)
 {
-	if (a->size > 1)
-		inv_rot_lst(&a->first, &a->last);
+	if (stk->size_a > 1)
+		inv_rot_lst(&stk->first_a, &stk->a->target);
 }
 
-void	rrb(t_stk *b)
+void	rrb(t_stk *stk)
 {
-	if (b->size > 1)
-		inv_rot_lst(&b->first, &b->last);
+	if (stk->size_b > 1)
+		inv_rot_lst(&stk->first_b, &stk->b->target);
 }
 
-void	print_rra(t_stk *a)
+void	print_rra(t_stk *stk)
 {
 	write(1, "ra\n", 3);
-	rra(a);
+	rra(stk);
 }
 
-void	print_rrb(t_stk *b)
+void	print_rrb(t_stk *stk)
 {
 	write(1, "rrb\n", 3);
-	rrb(b);
+	rrb(stk);
 }
 
-void	rrr(t_stk *a, t_stk *b)
+void	rrr(t_stk *stk)
 {
 	write(1, "rrr\n", 4);
-	rra(a);
-	rrb(b);
+	rra(stk);
+	rrb(stk);
 }

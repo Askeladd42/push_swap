@@ -6,38 +6,38 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/28 15:02:25 by plam              #+#    #+#             */
-/*   Updated: 2021/10/21 15:26:13 by plam             ###   ########.fr       */
+/*   Updated: 2021/11/26 15:31:07 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "stack.h"
 #include "instructions.h"
 
-void	pa(t_stk *a, t_stk *b)
+void	pa(t_stk *stk)
 {
-	if (b->size > 0)
+	if (stk->size_b > 0)
 	{
 		push(b, a);
-		a->size += 1;
-		b->size -= 1;
-		if (b->size == 0)
+		stk->size_a += 1;
+		stk->size_b -= 1;
+		if (stk->size_b == 0)
 			b->last = NULL;
-		if (a->size == 1)
+		if (stk->size_a == 1)
 			a->last = a->first;
 		printf("%s\n", "pa");
 	}
 }
 
-void	pb(t_stk *a, t_stk *b)
+void	pb(t_stk *stk)
 {
-	if (a->size > 0)
+	if (stk->size_a > 0)
 	{
 		push(a, b);
-		a->size -= 1;
-		b->size += 1;
-		if (a->size == 0)
+		stk->size_a -= 1;
+		stk->size_b += 1;
+		if (stk->size_a == 0)
 			a->last = NULL;
-		if (b->size == 1)
+		if (stk->size_b == 1)
 			b->last = b->first;
 		printf("%s\n", "pb");
 	}
