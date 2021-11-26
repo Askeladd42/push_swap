@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/04 09:00:36 by plam              #+#    #+#             */
-/*   Updated: 2021/11/26 12:28:51 by plam             ###   ########.fr       */
+/*   Updated: 2021/11/26 13:25:15 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -99,9 +99,9 @@ int	*tab_alloc(int size);
 int	*tabdup(int *dest, int *source, int size);
 void	insertion_sort(t_tab *tab);
 
-int	init_stack(t_tab *tab, t_stk *stack);
-t_elm	*create_stack(t_tab *tab, t_stk *stack);
-void	target_stack(t_tab *tab, t_elm *elm);
+int	init_stk(t_tab *tab, t_stk *stk);
+t_elm	*create_stk(t_tab *tab, t_stk *stk);
+void	target_stk(t_tab *tab, t_elm *elm);
 void	reset_pos(t_pos *pos);
 
 int	free_tab(int *tab);

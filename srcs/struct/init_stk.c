@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/05 11:34:31 by plam              #+#    #+#             */
-/*   Updated: 2021/11/26 12:40:45 by plam             ###   ########.fr       */
+/*   Updated: 2021/11/26 13:24:11 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ t_elm	*init_elm(void)
 	return (elm);
 }
 
-int	init_stack(t_tab *tab, t_stk *stk)
+int	init_stk(t_tab *tab, t_stk *stk)
 {
 	stk->a = create_stack(tab, stk);
 	if (stk->a == NULL)
