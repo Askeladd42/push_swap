@@ -6,64 +6,72 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/05 11:32:55 by plam              #+#    #+#             */
-/*   Updated: 2021/11/22 15:39:07 by plam             ###   ########.fr       */
+/*   Updated: 2021/11/26 12:36:14 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "struct.h"
+#include "instructions.h"
 
-static t_tab	create_tab(char **av, t_tab tab)
+int	*tab_alloc(int size)
 {
-	t_tab	t;
+	int	*tab;
 
-	t.data = data;
-	t.next = next;
-	t.prev = prev;
-	return (t);
+	tab = malloc(sizeof(int) * size);
+	return (tab);
 }
 
-t_lst	*add_first_lst(int data, t_lst *next)
+int	*tabdup(int *dst, int *src, int size)
 {
-	t_lst	*add;
-
-	add = (t_lst *)malloc(sizeof(t_lst));
-	if (add == NULL)
-	{
-		error_push_swap();
-		return (NULL);
-	}
-	*add = create_lst(data, next, NULL);
-	return (add);
+	ft_memcpy(dst, src, size * sizeof(int));
+	return (dst);
 }
 
-/*
-** add = last
-*/
-
-t_lst	*add_last_lst(int data, t_lst *last)
+int	next_number(int n, char *arg)
 {
-	t_lst	*add;
-
-	add = (t_lst *)malloc(sizeof(t_lst));
-	if (add == NULL)
-	{
-		error_push_swap();
-		return (NULL);
-	}
-	*add = create_lst(data, NULL, last);
-	if (last)
-		last->next = add;
-	return (add);
+	while (arg[n] == ' ')
+		n++;
+	if (arg[n] == '-' || arg[n] == '+')
+		n++;
+	while (arg[n] >= '0' && arg[n] <= '9')
+		n++;
+	while (arg[n] == ' ')
+		n++;
+	return (n);
 }
 
-void	free_all_lst(t_lst *l)
+int	set_numbers(char **av, t_tab *tab)
 {
-	t_lst	*tmp;
+	int		i;
+	int		j;
+	int		n;
+	long	tmp;
 
-	while (l)
+	i = 1;
+	n = 0;
+	while (av[i])
 	{
-		tmp = l->next;
-		free(l);
-		l = tmp;
+		j = 0;
+		while (av[i][j])
+		{
+			tmp = atol(av[i] + j);
+			if (tmp > INT_MAX || tmp < INT_MIN)
+				return (ERR);
+			tab->unsort[n] = tmp;
+			j = next_number(j, av[i]);
+			n++;
+		}
+		i++;
 	}
+	return (OK);
+}
+
+int	create_tab(char **av, t_tab *tab)
+{
+	tab->unsort = tab_alloc(tab->size);
+	if (tab->unsort == NULL)
+		return (ERR);
+	if (set_numbers(av, tab) == -1)
+		return (ERR);
+	return (OK);
 }

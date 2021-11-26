@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/04 09:00:36 by plam              #+#    #+#             */
-/*   Updated: 2021/11/26 12:27:58 by plam             ###   ########.fr       */
+/*   Updated: 2021/11/26 12:28:51 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -106,6 +106,5 @@ void	reset_pos(t_pos *pos);
 
 int	free_tab(int *tab);
 int	free_stk(t_elm **first);
-int	free_push_swap(t_tab *tab, t_stk *stk);
 
 #endif

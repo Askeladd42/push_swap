@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/05 11:34:31 by plam              #+#    #+#             */
-/*   Updated: 2021/11/24 12:39:25 by plam             ###   ########.fr       */
+/*   Updated: 2021/11/26 12:40:45 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ int	init_stack(t_tab *tab, t_stk *stk)
 {
 	stk->a = create_stack(tab, stk);
 	if (stk->a == NULL)
-		return (-1);
+		return (ERR);
 	stk->first_a = stk->a;
 	target_stack(tab, stk->first_a);
 	return (OK);

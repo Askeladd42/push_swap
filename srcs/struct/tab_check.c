@@ -6,35 +6,41 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/07 12:05:23 by plam              #+#    #+#             */
-/*   Updated: 2021/11/22 15:39:25 by plam             ###   ########.fr       */
+/*   Updated: 2021/11/26 12:42:50 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "struct.h"
 #include "instructions.h"
 
-static int	is_duplicate_data(t_lst *lst)
+void	reset_pos(t_pos *pos)
 {
-	t_lst	*i;
-	t_lst	*j;
+	pos->a = 0;
+	pos->b = 0;
+	pos->old_a = -1;
+	pos->old_b = -1;
+	pos->dist_a = 0;
+	pos->dist_b = 0;
+	pos->old_dist_a = 0;
+	pos->old_dist_b = 0;
+	pos->up_a = 0;
+	pos->up_b = 0;
+	pos->old_up_a = 0;
+	pos->old_up_a = 0;
+}
 
-	if (!lst->next)
-		return (FALSE);
-	i = lst;
-	while (i)
+int	target_pos(t_tab *tab, int pos)
+{
+	int	i;
+
+	i = 0;
+	while (i < tab->size)
 	{
-		j = i->next;
-		while (j)
-		{
-			if (i->data == j->data)
-			{
-				return (TRUE);
-			}
-			j = j->next;
-		}
-		i = i->next;
+		if (tab->unsort[pos] == tab->sort[i])
+			return (i);
+		i++;
 	}
-	return (FALSE);
+	return (0);
 }
 
 /*
