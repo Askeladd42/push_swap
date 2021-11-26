@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/28 15:01:35 by plam              #+#    #+#             */
-/*   Updated: 2021/11/26 15:20:53 by plam             ###   ########.fr       */
+/*   Updated: 2021/11/26 15:32:38 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ void	sb(t_stk *stk)
 void	print_sa(t_stk *stk)
 {
 	write(1, "sa\n", 3);
-	sa(a);
+	sa(stk);
 }
 
 void	print_sb(t_stk *stk)

@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/07 12:05:23 by plam              #+#    #+#             */
-/*   Updated: 2021/11/26 14:55:02 by plam             ###   ########.fr       */
+/*   Updated: 2021/11/26 15:32:58 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -103,7 +103,7 @@ t_stk	*generate_stack_a_content(char **srcs, int size)
 		return (NULL);
 	if (is_duplicate_data(t) == TRUE)
 	{
-		error_push_swap();
+		error_push_swap(t, stk);
 		return (NULL);
 	}
 	stk = malloc_stk(t, get_last_tab(t), size - 1);
