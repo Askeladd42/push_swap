@@ -6,12 +6,13 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/07 12:05:23 by plam              #+#    #+#             */
-/*   Updated: 2021/11/26 13:13:05 by plam             ###   ########.fr       */
+/*   Updated: 2021/11/26 14:55:02 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "struct.h"
 #include "instructions.h"
+#include "push_swap.h"
 
 void	reset_pos(t_pos *pos)
 {
@@ -94,23 +95,22 @@ int	stk_sort(t_elm *first, int size)
 
 t_stk	*generate_stack_a_content(char **srcs, int size)
 {
-	t_stk		*a;
-	t_lst		*l;
+	t_stk		*stk;
+	t_tab		*t;
 
-	l = get_all_values_to_lst(srcs, size);
-	if (!l)
+	t = get_all_values_to_tab(srcs, size);
+	if (!t)
 		return (NULL);
-	if (is_duplicate_data(l) == TRUE)
+	if (is_duplicate_data(t) == TRUE)
 	{
-		free_all_lst(l);
 		error_push_swap();
 		return (NULL);
 	}
-	a = malloc_stack(l, get_last_lst(l), size - 1);
-	if (!a)
+	stk = malloc_stk(t, get_last_tab(t), size - 1);
+	if (!stk)
 	{
-		free_all_lst(l);
+		free_push_swap(&t, &stk);
 		return (NULL);
 	}
-	return (a);
+	return (stk);
 }
