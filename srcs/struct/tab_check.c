@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/07 12:05:23 by plam              #+#    #+#             */
-/*   Updated: 2021/11/26 12:42:50 by plam             ###   ########.fr       */
+/*   Updated: 2021/11/26 13:13:05 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,48 +44,43 @@ int	target_pos(t_tab *tab, int pos)
 }
 
 /*
-** record integer values with atoi
-** if correct integer(atoi i return true or false) -> return malloc(lst)
+** record integer values
 */
 
-static t_lst	*atoi_to_lst(char *src, t_lst *last)
+void	target_stk(t_tab *tab, t_elm *elm)
 {
-	int		data;
+	int	i;
 
-	if (!str_is_digits(src) || ft_atoi_i(src, &data) == FALSE)
+	i = 0;
+	while (elm)
 	{
-		error_push_swap();
-		return (NULL);
+		elm->target = target_pos(tab, i);
+		elm = elm->next;
+		i++;
 	}
-	return (add_last_lst(data, last));
 }
 
 /*
-** record all values into lst *
+** record all values into the tab *
 */
 
-static t_lst	*get_all_values_to_lst(char **src, int size)
+int	stk_sort(t_elm *first, int size)
 {
-	int		i;
-	t_lst	*l;
-	t_lst	*first;
+	int		old_target;
+	t_elm	*elm;
 
-	i = 1;
-	first = atoi_to_lst(src[i], NULL);
-	if (first == NULL)
-		return (NULL);
-	l = first;
-	while (++i < size)
+	if (first == NULL || size != 0)
+		return (KO);
+	elm = first;
+	old_target = elm->target;
+	while (elm)
 	{
-		l->next = atoi_to_lst(src[i], l);
-		if (l->next == NULL)
-		{
-			free_all_lst(first);
-			return (NULL);
-		}
-		l = l->next;
+		if (elm->target < old_target)
+			return (KO);
+		old_target = elm->target;
+		elm = elm->next;
 	}
-	return (first);
+	return (OK);
 }
 
 /*
