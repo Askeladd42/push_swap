@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/04 12:39:04 by plam              #+#    #+#             */
-/*   Updated: 2021/11/26 13:14:27 by plam             ###   ########.fr       */
+/*   Updated: 2021/11/29 15:57:09 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,34 +54,19 @@ typedef struct s_move
 	int	rrr;
 }				t_move;
 
-/*static void	rot_lst(t_lst **first, t_lst **last);
-static void	inv_rot_lst(t_lst **first, t_lst **last);
-void		swap_int(int *a, int *b);
-static void	push_stk(t_stk *to_push, t_stk *stk);
-*/
+void	swap(t_elm **first, int size);
+void	double_swap(t_stk *stk);
+void	do_swap(t_stk *stk, int move);
 
+void	rotate(t_elm **first, int size);
+void	double_rotate(t_stk *stk);
+void	do_rotate(t_stk *stk, int move);
 
-void		sa(t_stk *stk);
-void		sb(t_stk *stk);
-void		ss(t_stk *stk);
+void	reverse_rotate(t_elm **first, int size);
+void	double_reverse_rotate(t_stk *stk);
+void	do_reverse_rotate(t_stk *stk, int move);
 
-void		ra(t_stk *stk);
-void		rb(t_stk *stk);
-void		rr(t_stk *stk);
-
-void		rra(t_stk *stk);
-void		rrb(t_stk *stk);
-void		rrr(t_stk *stk);
-
-void		pa(t_stk *stk);
-void		pb(t_stk *stk);
-
-int			print_cond(t_tab *tab, t_stk *stk);
-void		print_ra(t_stk *stk);
-void		print_rb(t_stk *stk);
-void		print_rra(t_stk *stk);
-void		print_rrb(t_stk *stk);
-void		print_sa(t_stk *stk);
-void		print_sb(t_stk *stk);
+void	push(t_elm **to, t_elm **from);
+void	do_push(t_stk *stk, int move);
 
 #endif

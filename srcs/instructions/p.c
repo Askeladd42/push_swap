@@ -6,39 +6,50 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/28 15:02:25 by plam              #+#    #+#             */
-/*   Updated: 2021/11/26 15:31:19 by plam             ###   ########.fr       */
+/*   Updated: 2021/11/29 15:55:23 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "struct.h"
 #include "instructions.h"
 
-void	pa(t_stk *stk)
+void	push(t_elm **to, t_elm **from)
 {
-	if (stk->size_b > 0)
+	t_elm	*elm_push;
+	t_elm	*tmp;
+
+	if (*from == NULL)
+		return ;
+	elm_push = *from;
+	if (elm_push->next)
 	{
-		push(b, a);
-		stk->size_a += 1;
-		stk->size_b -= 1;
-		if (stk->size_b == 0)
-			b->last = NULL;
-		if (stk->size_a == 1)
-			a->last = a->first;
-		printf("%s\n", "pa");
+		tmp = elm_push->next->next;
+		ft_lstadd_front(from, elm_push->next);
+		elm_push->next->next = tmp;
+		ft_lstadd_front(to, elm_push);
+	}
+	else
+	{
+		tmp = elm_push->next;
+		*from = tmp;
+		ft_lstadd_front(to, elm_push);
 	}
 }
 
-void	pb(t_stk *stk)
+void	do_push(t_stk *stk, int move)
 {
-	if (stk->size_a > 0)
+	if (move == MOVE_PA)
 	{
-		push(a, b);
-		stk->size_a -= 1;
-		stk->size_b += 1;
-		if (stk->size_a == 0)
-			a->last = NULL;
-		if (stk->size_b == 1)
-			b->last = b->first;
-		printf("%s\n", "pb");
+		push(&stk->first_a, &stk->first_b);
+		stk->size_a++;
+		stk->size_b--;
+		write(1, "pa\n", 3);
+	}
+	else if (move == MOVE_PB)
+	{
+		push(&stk->first_b, &stk->first_a);
+		stk->size_a--;
+		stk->size_b++;
+		write(1, "pb\n", 3);
 	}
 }

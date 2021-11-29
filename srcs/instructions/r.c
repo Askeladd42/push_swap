@@ -6,40 +6,56 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/28 14:58:10 by plam              #+#    #+#             */
-/*   Updated: 2021/11/26 15:24:41 by plam             ###   ########.fr       */
+/*   Updated: 2021/11/29 15:33:08 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "struct.h"
 #include "instructions.h"
 
-void	ra(t_stk *stk)
+void	rotate(t_elm **first, int size)
 {
-	if (stk->size_a > 1)
-		rot_lst(&stk->first_a, &stk->a->target);
+	t_elm	*elem_rotate;
+	t_elm	*new_first;
+	t_elm	*tmp;
+
+	if (*first == NULL || size < 2)
+		return ;
+	if (size == 2)
+	{
+		swap(first, size);
+		return ;
+	}
+	elem_rotate = *first;
+	new_first = elem_rotate->next;
+	tmp = elem_rotate->next->next;
+	elem_rotate->next = NULL;
+	ft_lstadd_front(first, new_first);
+	new_first->next = tmp;
+	ft_lstadd_back(first, elem_rotate);
 }
 
-void	rb(t_stk *stk)
+void	double_rotate(t_stk *stk)
 {
-	if (stk->size_b > 1)
-		rot_lst(&stk->first_b, &stk->b->target);
+	rotate(&stk->first_a, stk->size_a);
+	rotate(&stk->first_b, stk->size_b);
 }
 
-void	print_ra(t_stk *stk)
+void	do_rotate(t_stk *stk, int move)
 {
-	write(1, "ra\n", 3);
-	ra(stk);
-}
-
-void	print_rb(t_stk *stk)
-{
-	write(1, "rb\n", 3);
-	rb(stk);
-}
-
-void	rr(t_stk *stk)
-{
-	write(1, "rr\n", 3);
-	ra(stk);
-	rb(stk);
+	if (move == MOVE_RA)
+	{
+		rotate(&stk->first_a, stk->size_a);
+		write(1, "ra\n", 3);
+	}
+	else if (move == MOVE_RB)
+	{
+		rotate(&stk->first_b, stk->size_b);
+		write(1, "rb\n", 3);
+	}
+	else if (move == MOVE_RR)
+	{
+		double_rotate(stk);
+		write(1, "rr\n", 3);
+	}
 }
