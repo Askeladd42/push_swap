@@ -6,7 +6,7 @@
 #    By: plam <plam@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/03/15 11:29:08 by plam              #+#    #+#              #
-#    Updated: 2021/11/24 11:43:59 by plam             ###   ########.fr        #
+#    Updated: 2021/11/29 13:34:10 by plam             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -33,7 +33,7 @@ SRCS		+=	push_swap.c		errors.c\
 
 MAKE		=	/bin/make
 
-LIBFT		=	libft/libft.a
+LIB			=	libft/libft.a
 
 PATH		=	srcs/
 
@@ -52,7 +52,7 @@ CFLAGS		=	-g -Wall -Wextra -Werror -I $(HEADERS)
 all:			$(NAME)
 
 $(NAME):		$(LIBFT) $(OBJS)
-				$(CC) $(CFLAGS) $(OBJS) -o $(NAME)
+				$(CC) $(CFLAGS) $(LIB) $(OBJS) -o $(NAME)
 
 $(LIBFT):
 				$(MAKE) -sC libft

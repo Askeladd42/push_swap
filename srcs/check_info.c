@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/25 16:54:17 by plam              #+#    #+#             */
-/*   Updated: 2021/11/24 11:55:12 by plam             ###   ########.fr       */
+/*   Updated: 2021/11/29 14:04:05 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,12 +35,12 @@ int	check_info(char *arg)
 		if (arg[i] == '-' || arg[i] == '+')
 			i++;
 		if (arg[i] < '0' || arg[i] > '9')
-			return (0);
+			return (KO);
 		while (arg[i] >= '0' && arg[i] <= '9')
 			i++;
 		cnt++;
 		if (arg[i] != ' ' && arg[i] != '\0')
-			return (0);
+			return (KO);
 		while (arg[i] == ' ')
 			i++;
 	}
@@ -61,10 +61,9 @@ int	check_args(char **av, t_tab *tab)
 		tab->size += cnt;
 		i++;
 	}
-	return (0);
+	return (OK);
 }
 
-/*
 int	double_num(t_tab *tab)
 {
 	int	i;
@@ -73,12 +72,11 @@ int	double_num(t_tab *tab)
 	while (i < tab->size - 1)
 	{
 		if (tab->sort[i] == tab->sort[i + 1])
-			return (-1);
+			return (ERR);
 		i++;
 	}
-	return (0);
+	return (OK);
 }
-*/
 
 int	final_checker_order(t_stk *stk, t_tab *tab)
 {

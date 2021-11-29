@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/07 14:13:29 by plam              #+#    #+#             */
-/*   Updated: 2021/11/26 12:37:13 by plam             ###   ########.fr       */
+/*   Updated: 2021/11/29 13:38:25 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,7 +71,7 @@ int	create_tab(char **av, t_tab *tab)
 	tab->unsort = tab_alloc(tab->size);
 	if (tab->unsort == NULL)
 		return (ERR);
-	if (set_numbers(av, tab) == -1)
+	if (set_numbers(av, tab) == ERR)
 		return (ERR);
 	return (OK);
 }

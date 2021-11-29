@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/04 09:00:36 by plam              #+#    #+#             */
-/*   Updated: 2021/11/26 15:06:42 by plam             ###   ########.fr       */
+/*   Updated: 2021/11/29 14:08:12 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -103,6 +103,7 @@ int	init_stk(t_tab *tab, t_stk *stk);
 t_elm	*create_stk(t_tab *tab, t_stk *stk);
 void	reset_pos(t_pos *pos);
 int	target_pos(t_tab *tab, int pos);
+int	double_num(t_tab *tab);
 void	target_stk(t_tab *tab, t_elm *elm);
 
 int	free_tab(int *tab);
