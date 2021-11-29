@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/04 12:39:04 by plam              #+#    #+#             */
-/*   Updated: 2021/11/29 15:57:09 by plam             ###   ########.fr       */
+/*   Updated: 2021/11/29 16:13:23 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,6 +53,16 @@ typedef struct s_move
 	int	rrb;
 	int	rrr;
 }				t_move;
+
+int	ft_atol(const char *str);
+ft_memset
+ft_memcpy
+ft_lstnew
+ft_lstlast
+ft_lstclear
+ft_lstdelone
+ft_lstadd_front
+ft_lstadd_back
 
 void	swap(t_elm **first, int size);
 void	double_swap(t_stk *stk);
