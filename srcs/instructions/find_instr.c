@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/29 14:27:00 by plam              #+#    #+#             */
-/*   Updated: 2021/11/29 14:27:34 by plam             ###   ########.fr       */
+/*   Updated: 2021/11/29 14:29:49 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,17 +55,17 @@ void	find_moves(int size_a, int size_b, t_pos *pos, t_move *move)
 		move->pa = 1;
 }
 
-void	find_final_moves(int size_a, t_elem *first_a, t_move *move)
+void	find_final_moves(int size_a, t_elm *first_a, t_move *move)
 {
 	int		i;
-	t_elem	*elem;
+	t_elm	*elm;
 
 	i = 0;
-	elem = first_a;
-	while (elem->target != 0)
+	elm = first_a;
+	while (elm->target != 0)
 	{
 		i++;
-		elem = elem->next;
+		elm = elm->next;
 	}
 	if (i == 0)
 		return ;
