@@ -6,7 +6,7 @@
 #    By: plam <plam@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/03/15 11:29:08 by plam              #+#    #+#              #
-#    Updated: 2021/11/29 16:09:06 by plam             ###   ########.fr        #
+#    Updated: 2021/11/29 16:37:54 by plam             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -42,6 +42,8 @@ SRCS		+=	algo/low_num_algo.c\
 SRCS		+=	ft_atol.c		errors.c\
 				push_swap.c		print_inst.c\
 				check_info.c	print_inst2.c
+
+BONUS		+=	
 
 MAKE		=	/bin/make
 
