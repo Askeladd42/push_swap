@@ -6,7 +6,7 @@
 #    By: plam <plam@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/03/15 11:29:08 by plam              #+#    #+#              #
-#    Updated: 2021/11/29 13:34:10 by plam             ###   ########.fr        #
+#    Updated: 2021/11/29 14:28:05 by plam             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,9 @@ SRCS		+=	gnl/get_next_line.c\
 SRCS		+=	instructions/r.c\
 				instructions/s.c\
 				instructions/p.c\
-				instructions/rr.c
+				instructions/rr.c\
+				instructions/find_instr.c\
+				instructions/instructions.c
 
 SRCS		+=	struct/init_stk.c\
 				struct/init_tab.c\
@@ -27,9 +29,9 @@ SRCS		+=	struct/init_stk.c\
 SRCS		+=	algo/low_num_algo.c\
 				algo/algo_selec.c
 
-SRCS		+=	push_swap.c		errors.c\
-				check_info.c	print_inst.c\
-				instructions.c	print_inst2.c
+SRCS		+=	ft_atol.c		errors.c\
+				push_swap.c		print_inst.c\
+				check_info.c	print_inst2.c
 
 MAKE		=	/bin/make
 

@@ -6,52 +6,58 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/18 13:11:03 by plam              #+#    #+#             */
-/*   Updated: 2021/11/22 15:36:40 by plam             ###   ########.fr       */
+/*   Updated: 2021/11/29 14:25:58 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "struct.h"
 #include "instructions.h"
 
-static void	rot_lst(t_lst **first, t_lst **last)
+void	exec_moves_rotate(t_stk *stk, t_move *move)
 {
-	(*first)->prev = *last;
-	*first = (*first)->next;
-	(*last)->next = (*first)->prev;
-	*last = (*last)->next;
-	(*first)->prev = NULL;
-	(*last)->next = NULL;
+	while (move->rr > 0)
+	{
+		do_rotate(stk, MOVE_RR);
+		move->rr--;
+	}
+	while (move->ra > 0)
+	{
+		do_rotate(stk, MOVE_RA);
+		move->ra--;
+	}
+	while (move->rb > 0)
+	{
+		do_rotate(stk, MOVE_RB);
+		move->rb--;
+	}
 }
 
-static void	inv_rot_lst(t_lst **first, t_lst **last)
+void	exec_moves_reverse(t_stk *stk, t_move *move)
 {
-	(*last)->next = *first;
-	*last = (*last)->prev;
-	(*first)->prev = (*last)->next;
-	*first = (*first)->prev;
-	(*first)->prev = NULL;
-	(*last)->next = NULL;
+	while (move->rrr > 0)
+	{
+		do_reverse_rotate(stk, MOVE_RRR);
+		move->rrr--;
+	}
+	while (move->rra > 0)
+	{
+		do_reverse_rotate(stk, MOVE_RRA);
+		move->rra--;
+	}
+	while (move->rrb > 0)
+	{
+		do_reverse_rotate(stk, MOVE_RRB);
+		move->rrb--;
+	}
 }
 
-void	swap_int(int *a, int *b)
+void	exec_moves(t_stk *stk, t_move *move)
 {
-	int		tmp;
-
-	tmp = *a;
-	*a = *b;
-	*b = tmp;
-}
-
-static void	push_stk(t_stk *to_push, t_stk *stk)
-{
-	t_stk	*tmp;
-
-	tmp = to_push->first;
-	to_push->first = to_push->first->next;
-	if (to_push->first)
-		to_push->first->prev = NULL;
-	tmp->next = stk->first;
-	if (stk->first)
-		stk->first->prev = tmp;
-	stk->first = tmp;
+	exec_moves_rotate(stk, move);
+	exec_moves_reverse(stk, move);
+	if (move->pa == 1)
+	{
+		do_push(stk, MOVE_PA);
+		move->pa = 0;
+	}
 }
