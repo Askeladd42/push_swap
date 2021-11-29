@@ -6,12 +6,27 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/18 13:11:03 by plam              #+#    #+#             */
-/*   Updated: 2021/11/29 14:25:58 by plam             ###   ########.fr       */
+/*   Updated: 2021/11/29 15:25:52 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "struct.h"
 #include "instructions.h"
+
+void	reset_moves(t_move *move)
+{
+	move->sa = 0;
+	move->sb = 0;
+	move->ss = 0;
+	move->pa = 0;
+	move->pb = 0;
+	move->ra = 0;
+	move->rb = 0;
+	move->rr = 0;
+	move->rra = 0;
+	move->rrb = 0;
+	move->rrr = 0;
+}
 
 void	exec_moves_rotate(t_stk *stk, t_move *move)
 {

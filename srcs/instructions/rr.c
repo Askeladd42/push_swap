@@ -6,40 +6,52 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/28 15:00:10 by plam              #+#    #+#             */
-/*   Updated: 2021/11/26 15:28:07 by plam             ###   ########.fr       */
+/*   Updated: 2021/11/29 15:24:36 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "struct.h"
 #include "instructions.h"
 
-void	rra(t_stk *stk)
+void	reverse_rotate(t_elm **first, int size)
 {
-	if (stk->size_a > 1)
-		inv_rot_lst(&stk->first_a, &stk->a->target);
+	t_elm	*tmp;
+
+	if (*first == NULL || size < 2)
+		return ;
+	if (size == 2)
+	{
+		swap(first, size);
+		return ;
+	}
+	tmp = *first;
+	while (tmp->next->next)
+		tmp = tmp->next;
+	ft_lstadd_front(first, tmp->next);
+	tmp->next = NULL;
 }
 
-void	rrb(t_stk *stk)
+void	double_reverse_rotate(t_stk *stk)
 {
-	if (stk->size_b > 1)
-		inv_rot_lst(&stk->first_b, &stk->b->target);
+	reverse_rotate(&stk->first_a, stk->size_a);
+	reverse_rotate(&stk->first_b, &stk->size_b);
 }
 
-void	print_rra(t_stk *stk)
+void	do_reverse_rotate(t_stk *stk, int move)
 {
-	write(1, "ra\n", 3);
-	rra(stk);
-}
-
-void	print_rrb(t_stk *stk)
-{
-	write(1, "rrb\n", 3);
-	rrb(stk);
-}
-
-void	rrr(t_stk *stk)
-{
-	write(1, "rrr\n", 4);
-	rra(stk);
-	rrb(stk);
+	if (move == MOVE_RRA)
+	{
+		reverse_rotate(&stk->first_a, stk->size_a);
+		write(1, "rra\n", 4);
+	}
+	else if (move == MOVE_RRB)
+	{
+		reverse_rotate(&stk->first_b, stk->size_b);
+		write(1, "rrb\n", 4);
+	}
+	else if (move == MOVE_RRR)
+	{
+		double_reverse_rotate(stk);
+		write(1, "rrr\n", 4);
+	}
 }
