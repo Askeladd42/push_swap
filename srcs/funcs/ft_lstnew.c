@@ -6,20 +6,19 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/18 10:31:01 by plam              #+#    #+#             */
-/*   Updated: 2021/11/29 16:34:49 by plam             ###   ########.fr       */
+/*   Updated: 2021/11/30 23:51:18 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "instructions.h"
 
-t_elm	*ft_lstnew(void *content)
+t_elm	*ft_lstnew(void)
 {
-	t_elm	*elm;
+	t_elm	*new;
 
-	elm = (t_elm *)malloc(sizeof(t_elm));
-	if (elm == NULL)
+	new = malloc(sizeof(t_elm));
+	if (new == NULL)
 		return (NULL);
-	elm->target = content;
-	elm->next = NULL;
-	return (elm);
+	new->next = NULL;
+	return (new);
 }

@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/18 13:10:13 by plam              #+#    #+#             */
-/*   Updated: 2021/11/29 16:28:56 by plam             ###   ########.fr       */
+/*   Updated: 2021/11/30 23:43:19 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,8 @@
 
 void	ft_lstadd_front(t_elm **alst, t_elm *new)
 {
-	if (alst != NULL && new != NULL)
-	{
-		new->next = *alst;
-		*alst = new;
-	}
+	if (!alst && !new)
+		return ;
+	new->next = *alst;
+	*alst = new;
 }
