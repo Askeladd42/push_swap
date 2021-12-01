@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/04 12:39:04 by plam              #+#    #+#             */
-/*   Updated: 2021/11/30 23:50:33 by plam             ###   ########.fr       */
+/*   Updated: 2021/12/01 11:47:53 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,5 +78,10 @@ void	do_reverse_rotate(t_stk *stk, int move);
 
 void	push(t_elm **to, t_elm **from);
 void	do_push(t_stk *stk, int move);
+
+int	dist_simple_rot(int size_a, int size_b, int fst, t_pos *pos);
+int	dist_double_rot(int fst, t_pos *pos);
+int	dist_double_rev(int size_a, int size_b, int fst, t_pos *pos);
+void	dist_to_a(int size_a, int size_b, t_pos *pos);
 
 #endif
