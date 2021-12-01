@@ -1,31 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   algo_selec.c                                       :+:      :+:    :+:   */
+/*   push_b.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/27 11:51:37 by plam              #+#    #+#             */
-/*   Updated: 2021/12/01 13:30:12 by plam             ###   ########.fr       */
+/*   Created: 2021/12/01 13:41:49 by plam              #+#    #+#             */
+/*   Updated: 2021/12/01 13:45:52 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "struct.h"
 #include "instructions.h"
-#include "push_swap.h"
 
-int	solve(t_tab *tab, t_stk *stk, t_pos *pos, t_move *mov)
+void	push_to_b(t_seq *seq, t_tab *tab, t_stk *stk)
 {
-	if (init_stk(tab, stk) == ERR)
-		return (ERR);
-	if (longest_sequence(&tab->seq, tab, tab->size) == ERR)
-		return (ERR);
-	if (stk->size_a >= 3 && stk->size_a <= 5)
-		small_stk(stk);
-	else
+	int	i;
+	int	rotate;
+
+	i = 0;
+	set_push_elem(tab->size, seq->size, seq->lis, stk->first_a);
+	while (i < tab->size - seq->size)
 	{
-		push_to_b(&tab->seq, tab, stk);
-		push_to_a(stk, pos, mov);
+		rotate = next_elem_to_push(stk->first_a);
+		while (rotate > 0)
+		{
+			do_rotate(stk, MOVE_RA);
+			rotate--;
+		}
+		do_push(stk, MOVE_PB);
+		i++;
 	}
-	return (OK);
 }
