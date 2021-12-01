@@ -6,7 +6,7 @@
 #    By: plam <plam@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/03/15 11:29:08 by plam              #+#    #+#              #
-#    Updated: 2021/11/29 16:37:54 by plam             ###   ########.fr        #
+#    Updated: 2021/12/01 11:16:26 by plam             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -47,8 +47,6 @@ BONUS		+=
 
 MAKE		=	/bin/make
 
-LIB			=	libft/libft.a
-
 PATH		=	srcs/
 
 OBJS		= 	$(addprefix $(PATH), $(SRCS:.c=.o))
@@ -65,8 +63,8 @@ CFLAGS		=	-g -Wall -Wextra -Werror -I $(HEADERS)
 
 all:			$(NAME)
 
-$(NAME):		$(LIBFT) $(OBJS)
-				$(CC) $(CFLAGS) $(LIB) $(OBJS) -o $(NAME)
+$(NAME):
+				$(CC) $(CFLAGS) $(OBJS) -o $(NAME)
 
 $(LIBFT):
 				$(MAKE) -sC libft
