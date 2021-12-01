@@ -6,13 +6,39 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/27 11:51:37 by plam              #+#    #+#             */
-/*   Updated: 2021/12/01 13:30:12 by plam             ###   ########.fr       */
+/*   Updated: 2021/12/01 16:02:54 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "struct.h"
 #include "instructions.h"
 #include "push_swap.h"
+
+void	push_smallest(t_stk *stk, int smlst)
+{
+	int	i;
+	t_elm	*elm;
+
+	i = 0;
+	elm = stk->first_a;
+	while (elm->target != smlst)
+	{
+		i++;
+		elm = elm->next;
+	}
+	while (i <= stk->size_a / 2 && i > 0)
+	{
+		do_rotate(stk, MOVE_RA);
+		i--;
+	}
+	while (i > stk->size_a / 2 && i < stk->size_a)
+	{
+		do_reverse_rotate(stk, MOVE_RRA);
+		i++;
+	}
+	if (stk_sort(stk->first_a, 0) == KO)
+		do_push(stk, MOVE_PB);
+}
 
 int	solve(t_tab *tab, t_stk *stk, t_pos *pos, t_move *mov)
 {
