@@ -6,54 +6,28 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/15 11:29:27 by plam              #+#    #+#             */
-/*   Updated: 2021/11/22 15:40:31 by plam             ###   ########.fr       */
+/*   Updated: 2021/12/01 15:24:55 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "struct.h"
 #include "instructions.h"
 
-int	checker(int	*data)
+int	check_stack(t_elm *first, int size)
 {
-	if (get_next_line(0, stdin) > 0)
-		printf("%s\n", stdin);
-	else
+	int	old_target;
+	t_elm	*elm;
+
+	if (!first || !size)
+		return (KO);
+	elm = first;
+	old_target = elm->target;
+	while (elm)
 	{
-		write(2, "Error\n", 6);
-		return (ERR);
+		if (elm->target < old_target)
+			return (KO);
+		old_target = elm->target;
+		elm = elm->next;
 	}
-}
-
-void	check_sort(char *s_type, char *s_data)
-{
-	int	*data;
-	int	i;
-
-	data = malloc(sizeof(int) * check_info(s_data));
-	if (data == NULL)
-		return ;
-	i = 0;
-	while (i < check_info(s_data))
-		data[i++] = ft_atoi(*s_data);
-	while (get_next_line(0, stdin) > 0)
-	{
-		if (checker(data) == ERR)
-			write(2, "Error\n", 6);
-		else
-			printf("KO\n");
-	}
-}
-
-int	main(int ac, char **av)
-{
-	int	inst;
-
-	inst = 0;
-	if (ac > 1 && av[1])
-	{
-		check_sort(inst, av[1]);
-		if (checker(av[1]) == OK)
-			printf("OK\n");
-	}
-	return (0);
+	return (OK);
 }

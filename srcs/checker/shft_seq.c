@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/01 14:49:19 by plam              #+#    #+#             */
-/*   Updated: 2021/12/01 15:17:15 by plam             ###   ########.fr       */
+/*   Updated: 2021/12/01 15:22:10 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	shift_tab(t_seq *seq, t_tab *tab)
 	while (tab->unsort[0] != tab->sort[0])
 	{
 		i = 0;
-		tmp = (tab->unsort[0];
+		tmp = tab->unsort[0];
 		while (i < tab->size - 1)
 		{
 			tab->unsort[i] = tab->unsort[i + 1];
