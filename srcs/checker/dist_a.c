@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/01 11:19:25 by plam              #+#    #+#             */
-/*   Updated: 2021/12/01 13:00:41 by plam             ###   ########.fr       */
+/*   Updated: 2021/12/01 13:02:53 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,6 +81,6 @@ void	dist_to_a(int size_a, int size_b, t_pos *pos)
 
 	fst = ERR;
 	fst = dist_double_rot(fst, pos);
-	fst = dist_double_rev(fst, pos);
-	fst = dist_simple_rot(size_a, size_b, pos);
+	fst = dist_double_rev(size_a, size_b, fst, pos);
+	fst = dist_simple_rot(size_a, size_b, fst, pos);
 }
