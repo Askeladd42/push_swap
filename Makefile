@@ -6,7 +6,7 @@
 #    By: plam <plam@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/03/15 11:29:08 by plam              #+#    #+#              #
-#    Updated: 2021/12/01 11:16:26 by plam             ###   ########.fr        #
+#    Updated: 2021/12/01 14:48:56 by plam             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -35,6 +35,14 @@ SRCS		+=	struct/init_stk.c\
 				struct/tab_check.c\
 				struct/tab_creation.c\
 				struct/stk_creation.c
+
+SRCS		+=	checker/seq.c\
+				checker/dist_a.c\
+				checker/dist_b.c\
+				checker/find_a.c\
+				checker/push_a.c\
+				checker/push_b.c\
+				checker/shft_seq.c
 
 SRCS		+=	algo/low_num_algo.c\
 				algo/algo_selec.c
