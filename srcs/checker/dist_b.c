@@ -6,13 +6,12 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/01 13:41:15 by plam              #+#    #+#             */
-/*   Updated: 2021/12/01 14:00:17 by plam             ###   ########.fr       */
+/*   Updated: 2021/12/03 14:25:27 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "struct.h"
 #include "instructions.h"
-
 
 int	is_target(int target, int size, int *lis)
 {

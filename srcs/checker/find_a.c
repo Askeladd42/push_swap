@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/01 13:01:07 by plam              #+#    #+#             */
-/*   Updated: 2021/12/01 13:27:25 by plam             ###   ########.fr       */
+/*   Updated: 2021/12/03 14:32:24 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,13 +33,13 @@ int	biggest_target(t_elm *elm, int size)
 	}
 	if (b_i == size - 1)
 		return (0);
-	return (b_i + 1)
+	return (b_i + 1);
 }
 
 void	find_pos_a(int target, t_stk *stk, t_pos *pos)
 {
-	int	i;
-	int	near;
+	int		i;
+	int		near;
 	t_elm	*stk_a;
 
 	i = 0;
@@ -49,10 +49,10 @@ void	find_pos_a(int target, t_stk *stk, t_pos *pos)
 	while (stk_a)
 	{
 		if ((near == -1 || stk_a->target - target < near)
-				&& stk_a->target - target > 0)
+			&& stk_a->target - target > 0)
 		{
 			near = stk_a->target - target;
-			pos->a = i; 
+			pos->a = i;
 		}
 		i++;
 		stk_a = stk_a->next;
@@ -63,19 +63,19 @@ void	find_pos_a(int target, t_stk *stk, t_pos *pos)
 
 void	keep_best_pos(int size_a, int size_b, t_pos *pos)
 {
-		int	nb_mv;
-		int	old_nb_mv;
+	int	nb_mv;
+	int	old_nb_mv;
 
-		dist_to_a(size_a, size_b, pos);
-		nb_mv = pos->dist_a + pos->dist_b;
-		old_nb_mv = pos->old_dist_a + pos->old_dist_b;
-		if (pos->old_a == -1 || nb_mv < old_nb_mv)
-		{
-			pos->old_a = pos->a;
-			pos->old_b = pos->b;
-			pos->old_dist_a = pos->dist_a;
-			pos->old_dist_b = pos->old_dist_b;
-			pos->old_up_a = pos->up_a;
-			pos->old_up_b = pos->old_up_b;
-		}
+	dist_to_a(size_a, size_b, pos);
+	nb_mv = pos->dist_a + pos->dist_b;
+	old_nb_mv = pos->old_dist_a + pos->old_dist_b;
+	if (pos->old_a == -1 || nb_mv < old_nb_mv)
+	{
+		pos->old_a = pos->a;
+		pos->old_b = pos->b;
+		pos->old_dist_a = pos->dist_a;
+		pos->old_dist_b = pos->old_dist_b;
+		pos->old_up_a = pos->up_a;
+		pos->old_up_b = pos->old_up_b;
+	}
 }

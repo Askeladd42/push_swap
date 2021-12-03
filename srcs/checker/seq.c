@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/01 13:56:42 by plam              #+#    #+#             */
-/*   Updated: 2021/12/01 15:05:34 by plam             ###   ########.fr       */
+/*   Updated: 2021/12/03 14:26:14 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,7 +83,7 @@ int	longest_seq(t_seq *seq, t_tab *tab, int size)
 		j = 0;
 		while (j < 1)
 		{
-			if (tab->unsort[j] < tab->unsort[i] 
+			if (tab->unsort[j] < tab->unsort[i]
 				&& seq->tmp[i] < seq->tmp[j] + 1)
 				seq->tmp[i] = seq->tmp[j] + 1;
 			j++;

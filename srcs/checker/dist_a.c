@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/01 11:19:25 by plam              #+#    #+#             */
-/*   Updated: 2021/12/01 13:02:53 by plam             ###   ########.fr       */
+/*   Updated: 2021/12/03 14:32:56 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,7 +77,7 @@ int	dist_double_rev(int size_a, int size_b, int fst, t_pos *pos)
 
 void	dist_to_a(int size_a, int size_b, t_pos *pos)
 {
-	int fst;
+	int	fst;
 
 	fst = ERR;
 	fst = dist_double_rot(fst, pos);

@@ -6,13 +6,12 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/06 14:29:54 by plam              #+#    #+#             */
-/*   Updated: 2021/11/24 12:33:34 by plam             ###   ########.fr       */
+/*   Updated: 2021/12/03 14:23:17 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "struct.h"
 #include "instructions.h"
-
 
 t_elm	*create_stk(t_tab *tab, t_stk *stk)
 {
