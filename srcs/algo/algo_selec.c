@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/27 11:51:37 by plam              #+#    #+#             */
-/*   Updated: 2021/12/01 16:02:54 by plam             ###   ########.fr       */
+/*   Updated: 2021/12/03 12:14:01 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,16 @@ void	push_smallest(t_stk *stk, int smlst)
 	}
 	if (stk_sort(stk->first_a, 0) == KO)
 		do_push(stk, MOVE_PB);
+}
+
+void	small_stk(t_stk *stk)
+{
+	if (stk->size_a == 3)
+		stk_3_alg(stk);
+	else if (stk->size_a == 4)
+		stk_4_alg(stk);
+	else
+		stk_5_alg(stk);
 }
 
 int	solve(t_tab *tab, t_stk *stk, t_pos *pos, t_move *mov)

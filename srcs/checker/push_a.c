@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/01 13:28:19 by plam              #+#    #+#             */
-/*   Updated: 2021/12/01 13:40:11 by plam             ###   ########.fr       */
+/*   Updated: 2021/12/03 12:51:26 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	push_to_a(t_stk *stk, t_pos *pos, t_move *mov)
 {
 	t_elm	*stk_b;
 
-	while (check_sort(stk->first_a, stk->size_b) == 0)
+	while (stk_sort(stk->first_a, stk->size_b) == 0)
 	{
 		stk_b = stk->first_b;
 		while (stk_b)

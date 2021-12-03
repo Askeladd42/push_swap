@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/27 12:12:42 by plam              #+#    #+#             */
-/*   Updated: 2021/11/24 11:50:47 by plam             ###   ########.fr       */
+/*   Updated: 2021/12/03 12:31:34 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,14 +42,14 @@ int	main(int ac, char **av)
 	move = (t_move){0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
 	if (ac < 2)
 		return (0);
-	if (check_args(av, &tab) == -1)
+	if (check_args(av, &tab) == ERR)
 		return (error(&tab, &stk));
 	sort = first_sort(av, &tab);
-	if (sort == -1)
+	if (sort == ERR)
 		return (error_push_swap(&tab, &stk));
-	else if (sort == 1)
+	else if (sort == OK)
 		return (free_push_swap(&tab, &stk));
-	if (solve(&tab, &stk, &pos, &move) == -1)
+	if (solve(&tab, &stk, &pos, &move) == ERR)
 		return (error_push_swap(&tab, &stk));
 	return (free_push_swap(&tab, &stk));
 }

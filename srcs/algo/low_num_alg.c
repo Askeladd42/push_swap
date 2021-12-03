@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/26 13:25:32 by plam              #+#    #+#             */
-/*   Updated: 2021/11/22 15:40:49 by plam             ###   ########.fr       */
+/*   Updated: 2021/12/03 12:58:03 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,120 +14,62 @@
 #include "instructions.h"
 #include "push_swap.h"
 
-void	size_3_alg_part(t_stk *a)
+void	stk_3_alg_part(t_stk *stk)
 {
-	if (a->first->next->data > a->last->data)
+	t_elm	*elm;
+
+	elm = stk->first_a;
+	if (elm->target < elm->next->next->target)
 	{
-		if (a->first->data < a->last->data)
-		{
-			print_sa(a);
-			print_ra(a);
-		}
-		else
-			print_rra(a);
+		do_swap(stk, MOVE_SA);
+		do_rotate(stk, MOVE_RA);
 	}
+	else
+		do_reverse_rotate(stk, MOVE_RRA);
 }
 
-int	size_3_alg(t_stk *a)
+void	stk_3_alg(t_stk *stk)
 {
-	if (a->size != 3)
-		error_push_swap();
-	if (a->first->data > a->first->next->data)
+	t_elm	*elm;
+
+	elm = stk->first_a;
+	if (elm->target > elm->next->target)
 	{
-		if (a->first->next->data < a->last->data)
+		if (elm->next->target < elm->next->next->target)
 		{
-			if (a->first->data < a->last->data)
-				print_sa(a);
+			if (elm->target < elm->next->next->target)
+				do_swap(stk, MOVE_SA);
 			else
-				print_ra(a);
+				do_rotate(stk, MOVE_RA);
 		}
 		else
 		{
-			print_sa(a);
-			print_rra(a);
+			do_swap(stk, MOVE_SA);
+			do_reverse_rotate(stk, MOVE_RRA);
 		}
 	}
 	else
-		size_3_alg_part(a);
-	return (OK);
+		stk_3_alg_part(stk);
 }
 
-int	size_4_alg(t_stk *a, t_stk *b)
+void	stk_4_alg(t_stk *stk)
 {
-	if (a->size != 4)
-		error_push_swap();
-	while (check_order(a->first) == FALSE)
-	{
-		pb(a, b);
-		size_3_alg(a);
-		pa(a, b);
-		if (a->first->data > a->last->data)
-			print_ra(a);
-		if (a->first->data > a->first->next->data)
-		{
-			if (a->first->data > a->last->prev->data)
-			{
-				print_rra(a);
-				print_sa(a);
-				print_ra(a);
-				print_ra(a);
-			}
-			else
-				print_sa(a);
-		}
-	}
+	push_smallest(stk, 0);
+	if (stk_sort(stk, 0) == 0)
+		stk_3_alg(stk);
+	do_push(stk, MOVE_PA);
 }
 
-void	size_5_alg_part(t_stk *a, t_stk *b)
-{
-	while (check_order(a->first) == FALSE)
-	{
-		/* optimization idea :
-		if (b->first->data < b->last->data)
-		{	
-			if (a->first->data > a->first->next->data)
-				rr(a, b);
-			else
-				print_rb(b);
-		}
-		*/
-		/*
-			checking if the reintroduced number is in the good place :
-			- if yes : push b again
-			- if no : sort a again in the good order
-		*/
-		size_4_alg(a, b);
-		pa(a, b);
-		/*
-			checking again if the reintroduced number is in the good place :
-			- if yes : done !
-			- if no : sort a again in the good order
-		*/
-		if (a->first->data > a->last->data)
-			print_ra(a);
-		if (a->first->data > a->first->next->data)
-		{
-			if (a->first->data > a->last->prev->data)
-			{
-				print_rra(a);
-				print_sa(a);
-				print_rra(a);
-				print_sa(a);
-				print_ra(a);
-				print_ra(a);
-				print_ra(a);
-			}
-			else
-				print_sa(a);
-		}
-	}
-}
 
-int	size_5_alg(t_stk *a, t_stk *b)
+
+void	stk_5_alg(t_stk *stk)
 {
-	if (a->size != 5)
-		error_push_swap();
-	pb(a, b);
-	size_5_alg_part(a, b);
-	return (OK);
+	push_smallest(stk, 0);
+	if (stk_sort(stk->first_a, 0) == KO)
+		push_smallest(stk, 1);
+	if (stk_sort(stk->first_a, 0) == KO);
+		stk_3_alg(stk);
+	do_push(stk, MOVE_PA);
+	if (stk_sort(stk->first_a, stk->size_b) == KO)
+		do_push(stk, MOVE_PA);
 }

@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/18 14:43:53 by plam              #+#    #+#             */
-/*   Updated: 2021/12/01 16:03:36 by plam             ###   ########.fr       */
+/*   Updated: 2021/12/03 12:41:13 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 # define PUSH_SWAP_H
 
 # include <unistd.h>
-# include "libft.h"
 # include "struct.h"
 # include "instructions.h"
 
