@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/25 10:08:14 by plam              #+#    #+#             */
-/*   Updated: 2021/11/17 13:45:26 by plam             ###   ########.fr       */
+/*   Updated: 2021/12/03 14:46:24 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,8 @@ char	*ft_strcjoin(char *s1, char *s2)
 	char	*dest;
 
 	strsize = ft_strlen((char *)s1) + ft_strlen((char *)s2);
-	if (!(dest = (char *)malloc(sizeof(char) * (strsize + 1))))
+	dest = (char *)malloc(sizeof(char) * (strsize + 1));
+	if (!dest)
 		return (NULL);
 	i = 0;
 	while (s1 && s1[i])

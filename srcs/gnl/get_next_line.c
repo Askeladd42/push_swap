@@ -6,11 +6,18 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/25 10:07:36 by plam              #+#    #+#             */
-/*   Updated: 2021/12/03 14:36:02 by plam             ###   ########.fr       */
+/*   Updated: 2021/12/03 14:54:43 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
+
+int	err_or_cjoin(char **line, t_list lst)
+{
+	*line = ft_strcjoin(*line, lst.line);
+	if (!*line)
+		return (erase_err(line));
+}
 
 int	get_next_line(int fd, char **line)
 {
@@ -21,14 +28,15 @@ int	get_next_line(int fd, char **line)
 	if (!line || fd < 0)
 		return (-1);
 	if (lst.line[0] != '\0')
-		if (!(*line = ft_strcjoin(*line, lst.line)))
-			return (erase_err(line));
+		err_or_cjoin(line, lst);
 	while (checker(lst.line) == -1)
 	{
-		if ((err = read(fd, lst.line, BUFFER_SIZE)) == -1)
+		err = read(fd, lst.line, BUFFER_SIZE);
+		if (err == -1)
 			return (erase_err(line));
 		lst.line[err] = '\0';
-		if (!(*line = ft_strcjoin(*line, lst.line)))
+		*line = ft_strcjoin(*line, lst.line);
+		if (!*line)
 			return (erase_err(line));
 		if (err == 0)
 			return (0);
