@@ -6,7 +6,7 @@
 #    By: plam <plam@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/03/15 11:29:08 by plam              #+#    #+#              #
-#    Updated: 2021/12/03 14:19:36 by plam             ###   ########.fr        #
+#    Updated: 2021/12/04 09:52:31 by plam             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -66,7 +66,7 @@ NAME		=	push_swap
 
 RM			=	/bin/rm -f
 
-CC			=	/bin/clang
+CC			=	/usr/bin/clang
 
 CFLAGS		=	-g -Wall -Wextra -Werror -I $(HEADERS)
 
@@ -83,11 +83,9 @@ $(LIBFT):
 				$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
-				$(MAKE) -sC libft clean
 				$(RM) $(OBJS)
 
 fclean:			clean
-				$(MAKE) -sC libft fclean
 				$(RM) $(NAME)
 
 re:				fclean all
