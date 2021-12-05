@@ -6,7 +6,7 @@
 #    By: plam <plam@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/03/15 11:29:08 by plam              #+#    #+#              #
-#    Updated: 2021/12/04 09:52:31 by plam             ###   ########.fr        #
+#    Updated: 2021/12/05 21:02:26 by plam             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -72,7 +72,7 @@ CFLAGS		=	-g -Wall -Wextra -Werror -I $(HEADERS)
 
 all:			$(NAME)
 
-$(NAME):
+$(NAME):		$(OBJS)
 				$(CC) $(CFLAGS) $(OBJS) -o $(NAME)
 
 $(LIBFT):
