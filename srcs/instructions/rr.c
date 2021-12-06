@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/28 15:00:10 by plam              #+#    #+#             */
-/*   Updated: 2021/12/06 14:12:16 by plam             ###   ########.fr       */
+/*   Updated: 2021/12/06 14:13:34 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ void	reverse_rotate(t_elm **first, int size)
 void	double_reverse_rotate(t_stk *stk)
 {
 	reverse_rotate(&stk->first_a, stk->size_a);
-	reverse_rotate(&stk->first_b, &stk->size_b);
+	reverse_rotate(&stk->first_b, stk->size_b);
 }
 
 void	do_reverse_rotate(t_stk *stk, int move)
