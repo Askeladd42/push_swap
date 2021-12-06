@@ -6,40 +6,47 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/28 15:01:35 by plam              #+#    #+#             */
-/*   Updated: 2021/11/26 15:32:38 by plam             ###   ########.fr       */
+/*   Updated: 2021/12/06 14:10:53 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "struct.h"
 #include "instructions.h"
 
-void	sa(t_stk *stk)
+void	swap(t_elm **first, int size)
 {
-	if (stk->size_a > 1)
-		swap_int(&stk->first_a, &stk->first_a->next);
+	t_elm	*elm_tmp;
+	int		target_tmp;
+
+	if (*first == NULL || size < 2)
+		return ;
+	elm_tmp = *first;
+	target_tmp = elm_tmp->next->target;
+	elm_tmp->next->target = elm_tmp->target;
+	elm_tmp->target = target_tmp;
 }
 
-void	sb(t_stk *stk)
+void	double_swap(t_stk *stk)
 {
-	if (stk->size_b > 1)
-		swap_int(&stk->first_b, &stk->first_b->next);
+	swap(&stk->first_a, stk->size_a);
+	swap(&stk->first_b, stk->size_b);
 }
 
-void	print_sa(t_stk *stk)
+void	do_swap(t_stk *stk, int move)
 {
-	write(1, "sa\n", 3);
-	sa(stk);
-}
-
-void	print_sb(t_stk *stk)
-{
-	write(1, "sb\n", 3);
-	sb(stk);
-}
-
-void	ss(t_stk *stk)
-{
-	write(1, "ss\n", 3);
-	sa(stk);
-	sb(stk);
+	if (move == MOVE_SA)
+	{
+		swap(&stk->first_a, stk->size_a);
+		write(1, "sa\n", 3);
+	}
+	else if (move == MOVE_SB)
+	{
+		swap(&stk->first_b, stk->size_b);
+		write(1, "sb\n", 3);
+	}
+	else if (move == MOVE_SS)
+	{
+		double_swap(stk);
+		write(1, "ss\n", 3);
+	}
 }

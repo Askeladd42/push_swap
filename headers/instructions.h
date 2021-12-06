@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/04 12:39:04 by plam              #+#    #+#             */
-/*   Updated: 2021/12/03 12:42:32 by plam             ###   ########.fr       */
+/*   Updated: 2021/12/06 14:05:33 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@
 # include "struct.h"
 
 # include <unistd.h>
+# include <stdlib.h>
 # include <stdio.h>
 
 enum e_move {
@@ -54,7 +55,7 @@ typedef struct s_move
 	int	rrr;
 }				t_move;
 
-int	ft_atol(const char *str);
+long	ft_atol(const char *str);
 void	*ft_memset(void *s, int c, size_t n);
 void	*ft_memcpy(void *dest, const void *src, size_t n);
 t_elm	*ft_lstnew(void);
