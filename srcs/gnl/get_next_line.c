@@ -6,11 +6,13 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/25 10:07:36 by plam              #+#    #+#             */
-/*   Updated: 2021/12/03 14:54:43 by plam             ###   ########.fr       */
+/*   Updated: 2021/12/06 13:50:33 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
+
+int	get_next_loop(t_buff *lst, char **line, int nread, int fd)
 
 int	err_or_cjoin(char **line, t_list lst)
 {

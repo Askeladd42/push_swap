@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/25 10:08:14 by plam              #+#    #+#             */
-/*   Updated: 2021/12/03 14:46:24 by plam             ###   ########.fr       */
+/*   Updated: 2021/12/06 13:48:51 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,7 +83,7 @@ int	checker(char *line)
 	return (-1);
 }
 
-int	erase_err(char **line)
+int	clean(char **line)
 {
 	if (*line)
 		free(*line);
