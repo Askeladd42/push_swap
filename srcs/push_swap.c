@@ -6,27 +6,13 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/02 14:28:50 by plam              #+#    #+#             */
-/*   Updated: 2021/12/06 14:28:23 by plam             ###   ########.fr       */
+/*   Updated: 2021/12/06 14:29:16 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "struct.h"
 #include "instructions.h"
 #include "push_swap.h"
-
-int	main(int argc, char *argv[])
-{
-	t_tab	tab;
-	t_stk	stk;
-
-	if (argc < 2)
-		return (0);
-	stk = stk_creation(argv, argc);
-	if (!stk)
-		return (ERR);
-	free_stack(stk);
-	return (0);
-}
 
 int	main(int ac, char **av)
 {
