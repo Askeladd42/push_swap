@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/25 10:07:36 by plam              #+#    #+#             */
-/*   Updated: 2021/12/06 13:57:07 by plam             ###   ########.fr       */
+/*   Updated: 2021/12/06 13:57:38 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,11 +38,11 @@ int	get_next_line(int fd, char **line)
 	{
 		err = read(fd, lst.buff, BUFFER_SIZE);
 		if (err == -1)
-			return (erase_err(line));
+			return (clean(line));
 		lst.buff[err] = '\0';
 		*line = ft_strcjoin(*line, lst.buff);
 		if (!*line)
-			return (erase_err(line));
+			return (clean(line));
 		if (err == 0)
 			return (0);
 	}
