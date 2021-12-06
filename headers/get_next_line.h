@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/25 10:08:41 by plam              #+#    #+#             */
-/*   Updated: 2021/12/06 13:51:10 by plam             ###   ########.fr       */
+/*   Updated: 2021/12/06 13:59:44 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ typedef struct s_buff
 }			t_buff;
 
 int		clean(char **line);
+int		checker(char *line);
 int		get_next_loop(t_buff *lst, char **line, int nread, int fd);
 int		get_next_line(int fd, char **line);
 int		ft_strlen(char *s);
