@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/18 14:43:53 by plam              #+#    #+#             */
-/*   Updated: 2021/12/13 15:38:26 by plam             ###   ########.fr       */
+/*   Updated: 2021/12/13 16:10:51 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,5 @@ int	free_push_swap(t_tab *tab, t_stk *stk);
 
 int	first_sort(char **av, t_tab *tab);
 int	select_algo(t_stk a, t_stk b, int size);
-int	push_swap(t_tab tab, t_stk stk);
 
 #endif
