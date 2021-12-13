@@ -6,11 +6,12 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/25 16:54:17 by plam              #+#    #+#             */
-/*   Updated: 2021/12/13 15:37:30 by plam             ###   ########.fr       */
+/*   Updated: 2021/12/13 15:38:18 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "instructions.h"
+#include "struct.h"
 
 int	n_arg(void)
 {
