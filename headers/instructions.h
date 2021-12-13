@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/04 12:39:04 by plam              #+#    #+#             */
-/*   Updated: 2021/12/06 14:05:33 by plam             ###   ########.fr       */
+/*   Updated: 2021/12/13 14:13:48 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,10 +88,18 @@ void	dist_to_a(int size_a, int size_b, t_pos *pos);
 int	biggest_target(t_elm *elm, int size);
 void	find_pos_a(int target, t_stk *stk, t_pos *pos);
 void	keep_best_pos(int size_a, int size_b, t_pos *pos);
+void	exec_moves(t_stk *stk, t_move *move);
+void	reset_moves(t_move *move);
+
+void	find_moves(int size_a, int size_b, t_pos *pos, t_move *move);
+void	find_final_moves(int size_a, t_elm *first_a, t_move *move);
 
 void	set_push_elm(int size, int lis_size, int *lis, t_elm *elm);
 int		next_elm_to_push(t_elm *elm);
 void	push_to_b(t_seq *seq, t_tab *tab, t_stk *stk);
+void	shift_tab(t_seq *seq, t_tab *tab);
+void	unshift_seq(t_seq *seq, int size);
+
 
 void	push_smallest(t_stk *stk, int smlst);
 void	small_stk(t_stk *stk);

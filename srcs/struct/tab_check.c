@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/07 12:05:23 by plam              #+#    #+#             */
-/*   Updated: 2021/11/26 15:32:58 by plam             ###   ########.fr       */
+/*   Updated: 2021/12/13 14:01:57 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,7 +93,7 @@ int	stk_sort(t_elm *first, int size)
 **		return : generate stk a
 */
 
-t_stk	*generate_stack_a_content(char **srcs, int size)
+/*t_stk	*generate_stack_a_content(char **srcs, int size)
 {
 	t_stk		*stk;
 	t_tab		*t;
@@ -113,4 +113,4 @@ t_stk	*generate_stack_a_content(char **srcs, int size)
 		return (NULL);
 	}
 	return (stk);
-}
+}*/

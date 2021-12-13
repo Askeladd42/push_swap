@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/01 14:49:19 by plam              #+#    #+#             */
-/*   Updated: 2021/12/01 15:22:10 by plam             ###   ########.fr       */
+/*   Updated: 2021/12/13 14:05:08 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ void	shift_tab(t_seq *seq, t_tab *tab)
 	}
 }
 
-void	shift_seq(t_seq *seq, int size)
+void	unshift_seq(t_seq *seq, int size)
 {
 	int	i;
 
