@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/05 11:32:55 by plam              #+#    #+#             */
-/*   Updated: 2021/11/26 12:36:14 by plam             ###   ########.fr       */
+/*   Updated: 2021/12/13 15:52:55 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,15 +63,5 @@ int	set_numbers(char **av, t_tab *tab)
 		}
 		i++;
 	}
-	return (OK);
-}
-
-int	create_tab(char **av, t_tab *tab)
-{
-	tab->unsort = tab_alloc(tab->size);
-	if (tab->unsort == NULL)
-		return (ERR);
-	if (set_numbers(av, tab) == -1)
-		return (ERR);
 	return (OK);
 }
