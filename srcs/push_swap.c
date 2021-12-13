@@ -6,12 +6,10 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/02 14:28:50 by plam              #+#    #+#             */
-/*   Updated: 2021/12/13 15:00:49 by plam             ###   ########.fr       */
+/*   Updated: 2021/12/13 16:09:49 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "struct.h"
-#include "instructions.h"
 #include "push_swap.h"
 
 int	main(int ac, char **av)
