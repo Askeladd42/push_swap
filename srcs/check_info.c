@@ -6,12 +6,11 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/25 16:54:17 by plam              #+#    #+#             */
-/*   Updated: 2021/11/29 14:04:05 by plam             ###   ########.fr       */
+/*   Updated: 2021/12/13 15:37:30 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "instructions.h"
-#include "struct.h"
+#include "push_swap.h"
 
 int	n_arg(void)
 {
@@ -82,5 +81,5 @@ int	final_checker_order(t_stk *stk, t_tab *tab)
 {
 	if (stk->size_b != 0)
 		return (FALSE);
-	return (check_order(stk->a));
+	return (check_sort(tab));
 }
