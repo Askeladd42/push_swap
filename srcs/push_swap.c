@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/02 14:28:50 by plam              #+#    #+#             */
-/*   Updated: 2021/12/06 14:29:16 by plam             ###   ########.fr       */
+/*   Updated: 2021/12/13 15:00:49 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ int	main(int ac, char **av)
 	if (ac < 2)
 		return (0);
 	if (check_args(av, &tab) == ERR)
-		return (error(&tab, &stk));
+		return (error_push_swap(&tab, &stk));
 	sort = first_sort(av, &tab);
 	if (sort == ERR)
 		return (error_push_swap(&tab, &stk));

@@ -1,34 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_b.c                                           :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/01 13:41:49 by plam              #+#    #+#             */
-/*   Updated: 2021/12/13 14:24:28 by plam             ###   ########.fr       */
+/*   Created: 2021/12/13 14:55:48 by plam              #+#    #+#             */
+/*   Updated: 2021/12/13 14:57:41 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "struct.h"
-#include "instructions.h"
+#include "push_swap.h"
 
-void	push_to_b(t_seq *seq, t_tab *tab, t_stk *stk)
+void	ft_putstr_fd(char *s, int fd)
 {
-	int	i;
-	int	rotate;
+	size_t	i;
 
 	i = 0;
-	set_push_elm(tab->size, seq->size, seq->lis, stk->first_a);
-	while (i < tab->size - seq->size)
+	if (s)
 	{
-		rotate = next_elm_to_push(stk->first_a);
-		while (rotate > 0)
-		{
-			do_rotate(stk, MOVE_RA);
-			rotate--;
-		}
-		do_push(stk, MOVE_PB);
-		i++;
+		while (s[i])
+			i++;
+		write(fd, s, i);
 	}
 }

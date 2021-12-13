@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/18 14:43:53 by plam              #+#    #+#             */
-/*   Updated: 2021/12/03 12:41:13 by plam             ###   ########.fr       */
+/*   Updated: 2021/12/13 15:01:42 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,13 @@
 # include "struct.h"
 # include "instructions.h"
 
+void	ft_putstr_fd(char *s, int fd);
+
 int	check_order(t_tab *t);
 int check_sort(t_tab *t);
 int	check_info(char *arg);
 int	check_args(char **av, t_tab *tab);
+int	solve(t_tab *tab, t_stk *stk, t_pos *pos, t_move *mov);
 
 int	error_push_swap(t_tab *tab, t_stk *stk);
 int	free_push_swap(t_tab *tab, t_stk *stk);

@@ -6,7 +6,7 @@
 #    By: plam <plam@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/03/15 11:29:08 by plam              #+#    #+#              #
-#    Updated: 2021/12/05 21:02:26 by plam             ###   ########.fr        #
+#    Updated: 2021/12/13 14:28:38 by plam             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -46,7 +46,7 @@ SRCS		+=	checker/seq.c\
 
 SRCS		+=	algo/algo_selec.c\
 				algo/algo_selec.c\
-				algo/low_num_algo.c
+				algo/low_num_alg.c
 				
 SRCS		+=	errors.c\
 				push_swap.c\

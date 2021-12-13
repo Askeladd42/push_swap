@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/26 13:25:32 by plam              #+#    #+#             */
-/*   Updated: 2021/12/03 14:34:41 by plam             ###   ########.fr       */
+/*   Updated: 2021/12/13 14:46:55 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,7 @@ void	stk_3_alg(t_stk *stk)
 void	stk_4_alg(t_stk *stk)
 {
 	push_smallest(stk, 0);
-	if (stk_sort(stk, 0) == 0)
+	if (stk_sort(stk->first_a, 0) == 0)
 		stk_3_alg(stk);
 	do_push(stk, MOVE_PA);
 }

@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/01 13:28:19 by plam              #+#    #+#             */
-/*   Updated: 2021/12/03 12:51:26 by plam             ###   ########.fr       */
+/*   Updated: 2021/12/13 14:20:30 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ void	push_to_a(t_stk *stk, t_pos *pos, t_move *mov)
 		}
 		reset_moves(mov);
 		if (stk->first_b == NULL)
-			find_final_moves(stk->size_a, stk->size_b, pos, mov);
+			find_final_moves(stk->size_a, stk->first_a, mov);
 		else
 			find_moves(stk->size_a, stk->size_b, pos, mov);
 		exec_moves(stk, mov);
