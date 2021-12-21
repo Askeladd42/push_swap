@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/25 10:08:41 by plam              #+#    #+#             */
-/*   Updated: 2021/12/21 14:55:54 by plam             ###   ########.fr       */
+/*   Updated: 2021/12/21 15:48:29 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,6 @@ int		get_next_line(int fd, char **line);
 int		ft_strlen(char *s);
 int		ft_strclen(const char *s, char c);
 char	*ft_strcjoin(char *s1, char *s2);
-void	ft_memcmove(void *dst, const void *src, size_t n);
+void	ft_memmove(void *dst, const void *src, size_t n);
 
 #endif
