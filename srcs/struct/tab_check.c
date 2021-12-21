@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/07 12:05:23 by plam              #+#    #+#             */
-/*   Updated: 2021/12/13 14:01:57 by plam             ###   ########.fr       */
+/*   Updated: 2021/12/21 15:45:06 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,34 +83,3 @@ int	stk_sort(t_elm *first, int size)
 	}
 	return (OK);
 }
-
-/*
-**	record integers from each string && store them in lst in stk a
-**
-** 		char *(srcs) : all character strings are already split
-**					and must be convert into int
-**		check if there are duplicate values
-**		return : generate stk a
-*/
-
-/*t_stk	*generate_stack_a_content(char **srcs, int size)
-{
-	t_stk		*stk;
-	t_tab		*t;
-
-	t = get_all_values_to_tab(srcs, size);
-	if (!t)
-		return (NULL);
-	if (is_duplicate_data(t) == TRUE)
-	{
-		error_push_swap(t, stk);
-		return (NULL);
-	}
-	stk = malloc_stk(t, get_last_tab(t), size - 1);
-	if (!stk)
-	{
-		free_push_swap(&t, &stk);
-		return (NULL);
-	}
-	return (stk);
-}*/
