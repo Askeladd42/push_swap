@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/04 12:39:04 by plam              #+#    #+#             */
-/*   Updated: 2021/12/13 14:27:06 by plam             ###   ########.fr       */
+/*   Updated: 2021/12/21 14:18:27 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,13 +80,13 @@ void	do_reverse_rotate(t_stk *stk, int move);
 void	push(t_elm **to, t_elm **from);
 void	do_push(t_stk *stk, int move);
 
-int	dist_simple_rot(int size_a, int size_b, int fst, t_pos *pos);
-int	dist_double_rot(int fst, t_pos *pos);
-int	dist_double_rev(int size_a, int size_b, int fst, t_pos *pos);
+int		dist_simple_rot(int size_a, int size_b, int fst, t_pos *pos);
+int		dist_double_rot(int fst, t_pos *pos);
+int		dist_double_rev(int size_a, int size_b, int fst, t_pos *pos);
 void	dist_to_a(int size_a, int size_b, t_pos *pos);
 
-int	biggest_target(t_elm *elm, int size);
-int	longest_seq(t_seq *seq, t_tab *tab, int size);
+int		biggest_target(t_elm *elm, int size);
+int		longest_seq(t_seq *seq, t_tab *tab, int size);
 void	find_pos_a(int target, t_stk *stk, t_pos *pos);
 void	push_to_a(t_stk *stk, t_pos *pos, t_move *mov);
 void	keep_best_pos(int size_a, int size_b, t_pos *pos);

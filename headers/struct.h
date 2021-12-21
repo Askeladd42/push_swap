@@ -6,12 +6,12 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/04 09:00:36 by plam              #+#    #+#             */
-/*   Updated: 2021/12/13 15:54:54 by plam             ###   ########.fr       */
+/*   Updated: 2021/12/21 14:17:02 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef STACK_H
-# define STACK_H
+#ifndef STRUCT_H
+# define STRUCT_H
 
 # define TRUE 1
 # define FALSE 0
@@ -93,25 +93,25 @@ typedef struct s_pos
 	int	old_up_b;
 }				t_pos;
 
-int check_sort(t_tab *t);
-int	first_sort(char **av, t_tab *tab);
-int	create_tab(char **av, t_tab *tab);
-int	*tab_alloc(int size);
-int	*tabdup(int *dst, int *src, int size);
-int	set_numbers(char **av, t_tab *tab);
+int		check_sort(t_tab *t);
+int		first_sort(char **av, t_tab *tab);
+int		create_tab(char **av, t_tab *tab);
+int		*tab_alloc(int size);
+int		*tabdup(int *dst, int *src, int size);
+int		set_numbers(char **av, t_tab *tab);
 void	insertion_sort(t_tab *tab);
 
 t_elm	*init_elm(void);
-int	init_stk(t_tab *tab, t_stk *stk);
+int		init_stk(t_tab *tab, t_stk *stk);
 t_elm	*create_stk(t_tab *tab, t_stk *stk);
 void	reset_pos(t_pos *pos);
-int	target_pos(t_tab *tab, int pos);
-int	double_num(t_tab *tab);
+int		target_pos(t_tab *tab, int pos);
+int		double_num(t_tab *tab);
 void	target_stk(t_tab *tab, t_elm *elm);
 
-int	stk_sort(t_elm *first, int size);
+int		stk_sort(t_elm *first, int size);
 
-int	free_tab(int *tab);
-int	free_stk(t_elm **first);
+int		free_tab(int *tab);
+int		free_stk(t_elm **first);
 
 #endif
