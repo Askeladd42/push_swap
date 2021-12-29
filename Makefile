@@ -6,7 +6,7 @@
 #    By: plam <plam@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/03/15 11:29:08 by plam              #+#    #+#              #
-#    Updated: 2021/12/21 15:35:18 by plam             ###   ########.fr        #
+#    Updated: 2021/12/29 12:13:16 by plam             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,6 +16,7 @@ SRCS		+=	gnl/get_next_line.c\
 SRCS		+=	funcs/ft_atol.c\
 				funcs/ft_memset.c\
 				funcs/ft_memcpy.c\
+				funcs/ft_putstr_fd.c\
 				funcs/ft_lstnew.c\
 				funcs/ft_lstlast.c\
 				funcs/ft_lstclear.c\
@@ -33,8 +34,10 @@ SRCS		+=	instructions/r.c\
 SRCS		+=	struct/init_stk.c\
 				struct/init_tab.c\
 				struct/tab_check.c\
+				struct/first_sort.c\
+				struct/free_struct.c\
 				struct/tab_creation.c\
-				struct/stk_creation.c
+				struct/stk_creation.c\
 
 SRCS		+=	checker/seq.c\
 				checker/dist_a.c\
