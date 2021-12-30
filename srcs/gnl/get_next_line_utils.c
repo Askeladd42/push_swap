@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/25 10:08:14 by plam              #+#    #+#             */
-/*   Updated: 2021/12/06 13:48:51 by plam             ###   ########.fr       */
+/*   Updated: 2021/12/30 12:07:42 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,7 +69,7 @@ char	*ft_strcjoin(char *s1, char *s2)
 	return (dest);
 }
 
-int	checker(char *line)
+int	check(char *line)
 {
 	int	i;
 

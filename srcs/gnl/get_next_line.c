@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/25 10:07:36 by plam              #+#    #+#             */
-/*   Updated: 2021/12/21 15:48:55 by plam             ###   ########.fr       */
+/*   Updated: 2021/12/30 12:08:08 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ int	get_next_line(int fd, char **line)
 		if (!*line)
 			return (clean(line));
 	}
-	while (checker(lst.buff) == -1)
+	while (check(lst.buff) == -1)
 	{
 		err = read(fd, lst.buff, BUFFER_SIZE);
 		if (err == -1)
@@ -38,7 +38,7 @@ int	get_next_line(int fd, char **line)
 		if (err == 0)
 			return (0);
 	}
-	ft_memmove(lst.buff, lst.buff + checker(lst.buff) + 1, \
-		ft_strlen(lst.buff + checker(lst.buff) + 1) + 1);
+	ft_memmove(lst.buff, lst.buff + check(lst.buff) + 1, \
+		ft_strlen(lst.buff + check(lst.buff) + 1) + 1);
 	return (1);
 }
