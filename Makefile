@@ -6,7 +6,7 @@
 #    By: plam <plam@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/03/15 11:29:08 by plam              #+#    #+#              #
-#    Updated: 2021/12/29 12:15:54 by plam             ###   ########.fr        #
+#    Updated: 2021/12/30 11:55:48 by plam             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -55,7 +55,8 @@ SRCS		+=	errors.c\
 				push_swap.c\
 				check_info.c
 
-BONUS		+=	
+SRCS_BONUS	+=	$(SRCS)
+
 
 MAKE		=	/bin/make
 
@@ -63,9 +64,13 @@ PATH		=	srcs/
 
 OBJS		= 	$(addprefix $(PATH), $(SRCS:.c=.o))
 
+OBJS_BONUS	= 	$(addprefix $(PATH), $(SRCS_BONUS:.c=.o))
+
 HEADERS		+=	headers/
 
 NAME		=	push_swap
+
+NAME_BONUS	=	checker
 
 RM			=	/bin/rm -f
 
@@ -75,8 +80,13 @@ CFLAGS		=	-g -Wall -Wextra -Werror -I $(HEADERS)
 
 all:			$(NAME)
 
+bonus:			$(NAME_BONUS)
+
 $(NAME):		$(OBJS)
 				$(CC) $(CFLAGS) $(OBJS) -o $(NAME)
+
+$(NAME_BONUS):	$(OBJS_BONUS)
+				$(CC) $(CFLAGS) $(OBJS_BONUS) -o $(NAME_BONUS)
 
 $(LIBFT):
 				$(MAKE) -sC libft
@@ -86,10 +96,10 @@ $(LIBFT):
 				$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
-				$(RM) $(OBJS)
+				$(RM) $(OBJS) $(OBJS_BONUS)
 
 fclean:			clean
-				$(RM) $(NAME)
+				$(RM) $(NAME) $(NAME_BONUS)
 
 re:				fclean all
 
