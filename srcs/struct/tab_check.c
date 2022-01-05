@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/07 12:05:23 by plam              #+#    #+#             */
-/*   Updated: 2021/12/21 15:45:06 by plam             ###   ########.fr       */
+/*   Updated: 2022/01/05 13:39:52 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,7 @@ void	target_stk(t_tab *tab, t_elm *elm)
 }
 
 /*
-** record all values into the tab *
+** record all values into the tab
 */
 
 int	stk_sort(t_elm *first, int size)
