@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/25 16:54:17 by plam              #+#    #+#             */
-/*   Updated: 2021/12/13 15:38:18 by plam             ###   ########.fr       */
+/*   Updated: 2022/01/07 16:18:22 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,12 +56,12 @@ int	check_args(char **av, t_tab *tab)
 	while (av[i])
 	{
 		cnt = check_info(av[i]);
-		if (cnt == 0)
+		if (cnt == KO)
 			return (ERR);
 		tab->size += cnt;
 		i++;
 	}
-	return (OK);
+	return (0);
 }
 
 int	double_num(t_tab *tab)
@@ -75,7 +75,7 @@ int	double_num(t_tab *tab)
 			return (ERR);
 		i++;
 	}
-	return (OK);
+	return (0);
 }
 
 int	final_checker_order(t_stk *stk, t_tab *tab)
