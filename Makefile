@@ -6,7 +6,7 @@
 #    By: plam <plam@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/03/15 11:29:08 by plam              #+#    #+#              #
-#    Updated: 2022/01/11 13:55:59 by plam             ###   ########.fr        #
+#    Updated: 2022/01/12 11:18:16 by plam             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -56,8 +56,8 @@ SRCS		+=	errors.c\
 				check_info.c
 
 SRCS_BONUS	+=	$(SRCS)\
-				../bonus/inst_loop.c\
-				../bonus/check_loop.c
+				bonus/inst_loop.c\
+				bonus/check_loop.c
 
 
 MAKE		=	/bin/make
