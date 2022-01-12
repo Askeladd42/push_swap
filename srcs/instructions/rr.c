@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/28 15:00:10 by plam              #+#    #+#             */
-/*   Updated: 2022/01/12 16:13:38 by plam             ###   ########.fr       */
+/*   Updated: 2022/01/12 16:21:50 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ void	reverse_rotate(t_elm **first, int size)
 	tmp = *first;
 	while (tmp->next->next)
 		tmp = tmp->next;
-	ft_lstadd_front(first, tmp);
+	ft_lstadd_front(first, tmp->next);
 	tmp->next = NULL;
 }
 
