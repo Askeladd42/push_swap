@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/28 15:02:25 by plam              #+#    #+#             */
-/*   Updated: 2022/01/12 15:45:11 by plam             ###   ########.fr       */
+/*   Updated: 2022/02/08 16:01:54 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,25 +20,10 @@ void	push(t_elm **to, t_elm **from)
 
 	if (*from == NULL)
 		return ;
-	/*t_elm *frm = *from;
-	while (frm)
-	{
-		printf("from->target = %d\n", frm->target);
-		frm = frm->next;
-	}
-	t_elm *two = *to;
-	while (two)
-	{
-		printf("to = %d\n", two->target);
-		two = two->next;
-	}*/
 	elm_push = *from;
 	if (elm_push->next)
 	{
-		//tmp = elm_push->next->next;
 		*from = (*from)->next;
-		//ft_lstadd_front(from, elm_push->next);
-		//elm_push->next->next = tmp;
 		elm_push->next = *to;
 		ft_lstadd_front(to, elm_push);
 	}

@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/28 14:58:10 by plam              #+#    #+#             */
-/*   Updated: 2022/01/12 15:23:13 by plam             ###   ########.fr       */
+/*   Updated: 2022/02/08 16:01:50 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,6 @@
 void	rotate(t_elm **first, int size)
 {
 	t_elm	*elem_rotate;
-	//t_elm	*new_first;
-	//t_elm	*tmp;
 
 	if (*first == NULL || size < 2)
 		return ;
@@ -28,11 +26,7 @@ void	rotate(t_elm **first, int size)
 	}
 	elem_rotate = *first;
 	*first = elem_rotate->next;
-	//new_first = elem_rotate->next;
-	//tmp = elem_rotate->next->next;
 	elem_rotate->next = NULL;
-	//ft_lstadd_front(first, new_first);
-	//new_first->next = tmp;
 	ft_lstadd_back(first, elem_rotate);
 }
 
