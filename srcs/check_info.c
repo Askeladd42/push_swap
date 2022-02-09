@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/25 16:54:17 by plam              #+#    #+#             */
-/*   Updated: 2022/01/07 16:18:22 by plam             ###   ########.fr       */
+/*   Updated: 2022/02/09 16:11:43 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 int	n_arg(void)
 {
-	printf("No arguments given.\n");
+	write(1, "No arguments given.\n", 20);
 	return (FALSE);
 }
 
