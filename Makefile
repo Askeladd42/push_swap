@@ -6,7 +6,7 @@
 #    By: plam <plam@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/03/15 11:29:08 by plam              #+#    #+#              #
-#    Updated: 2022/01/12 11:18:16 by plam             ###   ########.fr        #
+#    Updated: 2022/02/11 14:45:14 by plam             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,6 +14,7 @@ SRCS		+=	gnl/get_next_line.c\
 				gnl/get_next_line_utils.c
 
 SRCS		+=	funcs/ft_atol.c\
+				funcs/ft_ltoa.c\
 				funcs/ft_memset.c\
 				funcs/ft_memcpy.c\
 				funcs/ft_putstr_fd.c\
