@@ -6,11 +6,11 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/15 11:38:00 by plam              #+#    #+#             */
-/*   Updated: 2021/01/07 08:41:51 by plam             ###   ########.fr       */
+/*   Updated: 2022/02/11 16:21:16 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "instructions.h"
 
 static int	count_prints(char const *s, char c)
 {
@@ -28,7 +28,7 @@ static int	count_prints(char const *s, char c)
 	return (p);
 }
 
-static char	**free_tab(char **tab)
+static char	**fr_tab(char **tab)
 {
 	size_t	i;
 
@@ -63,7 +63,7 @@ void	splitter(char const *s, char c, char **tab)
 			k++;
 		tab[i] = malloc(sizeof(char) * (print_len(&s[k], c) + 1));
 		if (tab[i] == NULL)
-			free_tab(tab);
+			fr_tab(tab);
 		if (s[k])
 		{
 			j = 0;
