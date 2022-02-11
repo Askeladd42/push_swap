@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/04 12:39:04 by plam              #+#    #+#             */
-/*   Updated: 2022/02/11 14:31:41 by plam             ###   ########.fr       */
+/*   Updated: 2022/02/11 16:13:31 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,6 +57,7 @@ typedef struct s_move
 
 long	ft_atol(const char *str);
 char	*ft_ltoa(long n);
+char	**ft_split(char const *s, char c);
 void	*ft_memset(void *s, int c, size_t n);
 void	*ft_memcpy(void *dest, const void *src, size_t n);
 t_elm	*ft_lstnew(void);
