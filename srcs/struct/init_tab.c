@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/05 11:32:55 by plam              #+#    #+#             */
-/*   Updated: 2022/02/12 17:47:08 by plam             ###   ########.fr       */
+/*   Updated: 2022/02/12 18:05:58 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,8 +72,6 @@ int	set_numbers(char **av, t_tab *tab)
 		while (av[i][j])
 		{
 			tmp = ft_atol(av[i] + j);
-			printf("%s\n", av[i] + j);
-			printf("%ld\n", tmp);
 			if (tmp > INT_MAX || tmp < INT_MIN || vl_cmp(tmp, &av[i][j]) == ERR)
 				return (ERR);
 			tab->unsort[n] = tmp;
