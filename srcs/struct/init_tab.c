@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/05 11:32:55 by plam              #+#    #+#             */
-/*   Updated: 2022/02/11 15:56:02 by plam             ###   ########.fr       */
+/*   Updated: 2022/02/12 17:47:08 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,23 @@ int	next_number(int n, char *arg)
 	return (n);
 }
 
+int	vl_cmp(long nb, const char *av)
+{
+	int		i;
+	char	*clone;
+
+	clone = ft_ltoa(nb);
+	i = 0;
+	while (av[i] && av[i] != ' ')
+	{
+		if (av[i] != clone[i])
+			return (ERR);
+		else
+			i++;
+	}
+	return (OK);
+}
+
 int	set_numbers(char **av, t_tab *tab)
 {
 	int		i;
@@ -55,7 +72,9 @@ int	set_numbers(char **av, t_tab *tab)
 		while (av[i][j])
 		{
 			tmp = ft_atol(av[i] + j);
-			if (tmp > INT_MAX || tmp < INT_MIN)
+			printf("%s\n", av[i] + j);
+			printf("%ld\n", tmp);
+			if (tmp > INT_MAX || tmp < INT_MIN || vl_cmp(tmp, &av[i][j]) == ERR)
 				return (ERR);
 			tab->unsort[n] = tmp;
 			j = next_number(j, av[i]);
