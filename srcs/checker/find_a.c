@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/01 13:01:07 by plam              #+#    #+#             */
-/*   Updated: 2022/02/14 16:26:59 by plam             ###   ########.fr       */
+/*   Updated: 2022/02/14 16:30:26 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,8 +74,8 @@ void	keep_best_pos(int size_a, int size_b, t_pos *pos)
 		pos->old_a = pos->a;
 		pos->old_b = pos->b;
 		pos->old_dist_a = pos->dist_a;
-		pos->old_dist_b = pos->old_dist_b;
+		pos->old_dist_b = pos->dist_b;
 		pos->old_up_a = pos->up_a;
-		pos->old_up_b = pos->old_up_b;
+		pos->old_up_b = pos->up_b;
 	}
 }
