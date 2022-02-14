@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/01 13:01:07 by plam              #+#    #+#             */
-/*   Updated: 2021/12/03 14:32:24 by plam             ###   ########.fr       */
+/*   Updated: 2022/02/14 16:26:59 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ int	biggest_target(t_elm *elm, int size)
 			b_i = i;
 		}
 		i++;
-		elm = elm ->next;
+		elm = elm->next;
 	}
 	if (b_i == size - 1)
 		return (0);
