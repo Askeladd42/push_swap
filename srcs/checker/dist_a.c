@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/01 11:19:25 by plam              #+#    #+#             */
-/*   Updated: 2021/12/03 14:32:56 by plam             ###   ########.fr       */
+/*   Updated: 2022/02/14 16:16:48 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,7 @@ int	dist_double_rot(int fst, t_pos *pos)
 	else if (pos->b > pos->a)
 	{
 		fst = pos->b;
+		pos->dist_b = pos->b;
 		pos->dist_a = 0;
 		pos->up_a = 1;
 		pos->up_b = 1;
