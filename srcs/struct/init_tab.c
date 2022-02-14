@@ -6,7 +6,7 @@
 /*   By: plam <plam@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/05 11:32:55 by plam              #+#    #+#             */
-/*   Updated: 2022/02/12 18:05:58 by plam             ###   ########.fr       */
+/*   Updated: 2022/02/15 00:04:03 by plam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,10 +50,14 @@ int	vl_cmp(long nb, const char *av)
 	while (av[i] && av[i] != ' ')
 	{
 		if (av[i] != clone[i])
+		{
+			free(clone);
 			return (ERR);
+		}
 		else
 			i++;
 	}
+	free(clone);
 	return (OK);
 }
 
